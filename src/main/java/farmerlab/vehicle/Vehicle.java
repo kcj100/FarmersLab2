@@ -1,4 +1,22 @@
 package farmerlab.vehicle;
 
-public class Vehicle {
+import farmerlab.interfaces.FarmVehicle;
+import farmerlab.interfaces.NoiseMaker;
+import farmerlab.interfaces.Rideable;
+
+public class Vehicle implements Rideable, NoiseMaker {
+
+    private String name;
+
+    public Vehicle(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
