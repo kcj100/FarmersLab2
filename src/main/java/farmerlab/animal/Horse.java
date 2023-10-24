@@ -3,22 +3,18 @@ package farmerlab.animal;
 import farmerlab.interfaces.Rideable;
 
 public class Horse extends Animal implements Rideable {
-    public Horse(String animalType){
-        super(animalType);
+    public Horse(String animalName){
+        super(animalName);
     }
 
     @Override
     public void makeNoise(){
-        System.out.println(getAnimalType() + " makes a noise");
+        System.out.println(getAnimalName() + " makes a noise");
     }
 
     @Override
-    public void mount() {
-        System.out.println("mounting the " + getAnimalType());
+    public void isRideable() {
+        System.out.println(getAnimalName() + " is rideable.");
     }
 
-    @Override
-    public void dismount() {
-        System.out.println("Dismounting from the " + getAnimalType());
-    }
 }

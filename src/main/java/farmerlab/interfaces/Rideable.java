@@ -7,4 +7,5 @@ public interface Rideable {
       return isRideable;
   }
 
+    void isRideable();
 }

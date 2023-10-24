@@ -5,25 +5,25 @@ import farmerlab.interfaces.NoiseMaker;
 
 public abstract class Animal implements NoiseMaker, Eater {
 
-    private String animalType;
+    private String animalName;
 
-    public Animal(String animalType){
-        this.animalType = animalType;
+    public Animal(String animalNamee){
+        this.animalName = animalName;
     }
 
-    public String getAnimalType() {
-        return animalType;
+    public String getAnimalName() {
+        return animalName;
     }
 
-    public void setAnimalType(String animalType) {
-        this.animalType = animalType;
+    public void setAnimalName(String animalName) {
+        this.animalName = animalName;
     }
 
     public abstract void makeNoise();
 
     @Override
     public void eat(Edible food){
-        System.out.println(animalType + "is eating " + food.getName());
+        System.out.println(animalName + "is eating " + food.getName());
     }
 
 }
