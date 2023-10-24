@@ -1,13 +1,14 @@
 package farmerlab.animal;
 
 import farmerlab.interfaces.Eater;
+import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.NoiseMaker;
 
 public abstract class Animal implements NoiseMaker, Eater {
 
     private String animalName;
 
-    public Animal(String animalNamee){
+    public Animal(String animalName){
         this.animalName = animalName;
     }
 
@@ -23,7 +24,7 @@ public abstract class Animal implements NoiseMaker, Eater {
 
     @Override
     public void eat(Edible food){
-        System.out.println(animalName + "is eating " + food.getName());
+        System.out.println(animalName + "is eating " + food.getClass().getSimpleName().toLowerCase());
     }
 
 }
