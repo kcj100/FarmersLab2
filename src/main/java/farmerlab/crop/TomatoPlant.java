@@ -5,8 +5,8 @@ public class TomatoPlant extends Crop{
         super(hasBeenHavested, hasBeenFertilized);
     }
 
-    public Tomato yield(){
-        Crop tomato = Tomato;
-        return tomato;
-    }
+//    public Tomato yield(){
+//        Crop tomato = Tomato;
+//        return tomato;
+//    }
 }
