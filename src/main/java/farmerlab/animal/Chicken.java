@@ -5,13 +5,13 @@ import farmerlab.interfaces.Produce;
 public class Chicken extends Animal implements Produce {
     private boolean hasBeenFertilized;
 
-    public Chicken(String animalType) {
-        super(animalType);
+    public Chicken(String animalName) {
+        super(animalName);
     }
 
     @Override
     public void makeNoise() {
-        System.out.println(getAnimalType() + " makes a noise.");
+        System.out.println(getAnimalName() + " makes a noise.");
     }
     public boolean gethasBeenFertilized(){
         return hasBeenFertilized;
@@ -22,7 +22,7 @@ public class Chicken extends Animal implements Produce {
 
     public void layEgg(){
         if(!hasBeenFertilized){
-            System.out.println(getAnimalType() + "has laid an Edible Egg");
+            System.out.println(getAnimalName() + "has laid an Edible Egg");
         }else{
             System.out.println("Can't lay egg. Egg has been fertilized.");
         }
@@ -33,7 +33,7 @@ public class Chicken extends Animal implements Produce {
         if(!hasBeenFertilized){
             return new Egg();
         }else{
-            System.out.println(getAnimalType() + "has been flagged as true, can't yield egg it is fertilized");
+            System.out.println(getAnimalName() + "has been flagged as true, can't yield egg it is fertilized");
             return null;
         }
     }
