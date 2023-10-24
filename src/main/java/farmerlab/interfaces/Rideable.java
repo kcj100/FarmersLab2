@@ -1,10 +1,7 @@
 package farmerlab.interfaces;
 
 public interface Rideable {
-  boolean isRideable = true;
+    boolean isInUse();
 
-  private boolean getIsRideable(){
-      return isRideable;
-  }
-
+   void setInUse(boolean available);
 }

@@ -5,9 +5,8 @@ import farmerlab.interfaces.Edible;
 public class Pilot extends Person {
     private boolean canFly;
 
-    public Pilot(String name, boolean canFly) {
+    public Pilot(String name) {
         super(name);
-        this.canFly = canFly;
     }
 
     public boolean canFly() {
@@ -19,7 +18,7 @@ public class Pilot extends Person {
     }
 
     public static void main(String[] args) {
-        Pilot pilot = new Pilot("John Doe", true);
+        Pilot pilot = new Pilot("John Doe");
         System.out.println("Pilot's name: " + pilot.getName());
         System.out.println("Can the pilot fly? " + pilot.canFly());
     }
