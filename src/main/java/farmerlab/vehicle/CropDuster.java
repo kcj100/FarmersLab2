@@ -5,7 +5,7 @@ public class CropDuster extends Aircraft {
         super(name);
     }
 
-    public void fertelize(){
+    public void fertilize(){
 
     }
 }
