@@ -1,4 +1,15 @@
 package farmerlab.crop;
 
-public class CornStalk {
+import farmerlab.interfaces.Edible;
+
+public class CornStalk extends Crop{
+
+
+    public CornStalk(boolean hasBeenHavested, boolean hasBeenFertilized) {
+        super(hasBeenHavested, hasBeenFertilized);
+    }
+
+    public Edible yield() {
+        return new Corn();
+    }
 }
