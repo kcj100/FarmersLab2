@@ -20,14 +20,17 @@ public abstract class Crop implements Produce, Botanist {
 
     @Override
     public Edible yield() {
+
         return null;
     }
 
     public boolean isHasBeenHavested() {
+
         return hasBeenHavested;
     }
 
     public void setHasBeenHavested(boolean hasBeenHavested) {
+
         this.hasBeenHavested = hasBeenHavested;
     }
 

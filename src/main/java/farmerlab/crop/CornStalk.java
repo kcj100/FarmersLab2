@@ -1,5 +1,6 @@
 package farmerlab.crop;
 
+<<<<<<< HEAD
 import farmerlab.interfaces.Edible;
 
 public class CornStalk extends Crop{
@@ -12,4 +13,8 @@ public class CornStalk extends Crop{
     public Edible yield() {
         return new Corn();
     }
+=======
+public class CornStalk {
+
+>>>>>>> c2fabe88d1ac1e8ec293287f8371ed42bb126ebb
 }
