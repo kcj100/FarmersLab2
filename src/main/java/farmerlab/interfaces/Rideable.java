@@ -1,7 +1,10 @@
 package farmerlab.interfaces;
 
 public interface Rideable {
-    void mount();
-    void dismount();
+  boolean isRideable = true;
+
+  private boolean getIsRideable(){
+      return isRideable;
+  }
 
 }
