@@ -1,8 +1,5 @@
 package farmerlab.animal;
 
-
-public class Animal {
-
 import farmerlab.interfaces.Eater;
 import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.NoiseMaker;
