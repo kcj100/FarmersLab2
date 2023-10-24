@@ -1,4 +1,6 @@
 package farmerlab.crop;
 
-public class Corn {
+import farmerlab.interfaces.Edible;
+
+public class Corn implements Edible {
 }

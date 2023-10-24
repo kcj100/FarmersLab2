@@ -1,4 +1,6 @@
 package farmerlab.crop;
 
-public class Tomato {
+import farmerlab.interfaces.Edible;
+
+public class Tomato implements Edible {
 }
