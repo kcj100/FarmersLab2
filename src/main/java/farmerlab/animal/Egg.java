@@ -1,4 +1,8 @@
 package farmerlab.animal;
 
-public class Egg {
+import farmerlab.interfaces.Edible;
+
+public class Egg implements Edible {
+
+
 }
