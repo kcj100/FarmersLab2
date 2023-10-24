@@ -13,4 +13,9 @@ public class Farmer extends  Person{
     public void eat(Edible food) {
 
     }
+
+    @Override
+    public void makeNoise() {
+
+    }
 }
