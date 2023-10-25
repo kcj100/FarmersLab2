@@ -4,18 +4,18 @@ import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.Produce;
 
 public class Chicken extends Animal implements Produce {
-    private boolean hasBeenFertilized;
+    private boolean hasBeenFertilized = false;
 
-    public Chicken(String animalName, boolean hasBeenFertilized) {
+    public Chicken(String animalName) {
         super(animalName);
-        this.hasBeenFertilized = hasBeenFertilized;
     }
 
     @Override
     public boolean makeNoise() {
         System.out.println(getAnimalName() + " makes a noise.");
-        return false;
+        return true;
     }
+    
     public boolean gethasBeenFertilized(){
         return hasBeenFertilized;
     }
@@ -35,4 +35,6 @@ public class Chicken extends Animal implements Produce {
             return null;
         }
     }
+
+
 }
