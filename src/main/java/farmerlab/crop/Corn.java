@@ -7,4 +7,9 @@ public class Corn implements Edible {
     public boolean getIfEdible() {
         return false;
     }
+
+    @Override
+    public void eat() {
+
+    }
 }

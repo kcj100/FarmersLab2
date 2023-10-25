@@ -7,15 +7,20 @@ public class Farmer extends  Person{
 
     public Farmer(String name) {
         super(name);
+
     }
+
 
     @Override
     public void eat(Edible food) {
+        food.eat();
 
     }
 
-    @Override
-    public void makeNoise() {
 
+    @Override
+    public boolean makeNoise() {
+        System.out.println("This Farmer makes noise");
+        return false;
     }
 }

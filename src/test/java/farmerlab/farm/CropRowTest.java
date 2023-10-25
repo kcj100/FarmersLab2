@@ -1,9 +1,6 @@
 package farmerlab.farm;
 
-import farmerlab.crop.CornStalk;
-import farmerlab.crop.Crop;
-import farmerlab.crop.Tomato;
-import farmerlab.crop.TomatoPlant;
+import farmerlab.crop.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +26,8 @@ class CropRowTest {
          */
         ArrayList<Crop> cropRow = new ArrayList<>();
         Crop tomato = new TomatoPlant(true, true);
+        Crop corn = new Corn();
+        Crop cornStalk = new CornStalk(true, true);
         cropRow.add(Crop);
         cropRow.add(CornStalk);
         cropRow.add

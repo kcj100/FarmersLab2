@@ -6,13 +6,15 @@ import farmerlab.interfaces.Produce;
 public class Chicken extends Animal implements Produce {
     private boolean hasBeenFertilized;
 
-    public Chicken(String animalName) {
+    public Chicken(String animalName, boolean hasBeenFertilized) {
         super(animalName);
+        this.hasBeenFertilized = hasBeenFertilized;
     }
 
     @Override
-    public void makeNoise() {
+    public boolean makeNoise() {
         System.out.println(getAnimalName() + " makes a noise.");
+        return false;
     }
     public boolean gethasBeenFertilized(){
         return hasBeenFertilized;
@@ -21,18 +23,13 @@ public class Chicken extends Animal implements Produce {
         this.hasBeenFertilized = fertilized;
     }
 
-    public void layEgg(){
-        if(!hasBeenFertilized){
-            System.out.println(getAnimalName() + "has laid an Edible Egg");
-        }else{
-            System.out.println("Can't lay egg. Egg has been fertilized.");
-        }
-    }
-
     @Override
     public Edible yield(){
         if(!hasBeenFertilized){
+            System.out.println(getAnimalName() + "has laid an Edible Egg");
+            hasBeenFertilized = true;
             return new Egg();
+
         }else{
             System.out.println(getAnimalName() + "has been flagged as true, can't yield egg it is fertilized");
             return null;
