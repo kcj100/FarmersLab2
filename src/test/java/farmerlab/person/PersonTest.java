@@ -10,7 +10,7 @@ class PersonTest {
     void getName(){
 
     String expectedName = "John Doe";
-    Farmer farmer = new Farmer(expectedName);
+    Person farmer = new Farmer(expectedName, expectedName) {};
 
     String actualName = farmer.getName();
 
@@ -21,12 +21,12 @@ class PersonTest {
 @Test
     void setName(){
 
-    Farmer farmer = new Farmer("Dante");
+    Person person = new Farmer("Dante", "");
 
     String expectedName = "Dante";
-    farmer.setName(expectedName);
+    person.setName(expectedName);
 
-    String actualName = farmer.getName();
+    String actualName = person.getName();
 
     assertEquals(expectedName, actualName);
 }

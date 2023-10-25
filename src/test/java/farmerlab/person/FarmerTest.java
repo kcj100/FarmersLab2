@@ -10,24 +10,25 @@ class FarmerTest {
     @Test
     void farmerName(){
         String expectedName = "Dante";
-        Farmer farmer = new Farmer(expectedName);
+        String expectedPhrase = "The roosters are singing";
+        Farmer farmer = new Farmer(expectedName, expectedPhrase);
 
         assertEquals(expectedName, farmer.getName());
     }
 
     @Test
     void testEat() {
-        Farmer farmer = new Farmer("Dante");
+        Farmer farmer = new Farmer("Dante", "The roosters are singing");
         Edible food = new Edible() {};
 
         farmer.eat(food);
 
-        assertTrue(food.isConsumed());
+        assertTrue(food.isEaten());
     }
 
     @Test
     void testMakeNoise() {
-        Farmer farmer = new Farmer("John");
+        Farmer farmer = new Farmer("James", "lets get er done");
         assertTrue(farmer.makeNoise());
     }
 
