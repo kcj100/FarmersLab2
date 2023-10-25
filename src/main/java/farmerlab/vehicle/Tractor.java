@@ -26,7 +26,9 @@ public class Tractor extends Vehicle implements FarmVehicle {
         }
     }
 
-
+    public void makeNoise () {
+        System.out.println(getSound());
+    }
 
     public void operate(boolean inUse) {
         setInUse(inUse);

@@ -1,5 +1,7 @@
 package farmerlab.vehicle;
 
+import farmerlab.farm.Field;
+
 public abstract class Aircraft extends Vehicle  {
 
 
@@ -7,5 +9,7 @@ public abstract class Aircraft extends Vehicle  {
         super( id, sound);
     }
 
-    public abstract void fly();
+    public abstract void fly(Field field);
+
+
 }
