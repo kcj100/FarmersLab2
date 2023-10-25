@@ -20,4 +20,11 @@ public class ChickenCoop {
     public void addChicken(Chicken chicken){
         chickens.add(chicken);
     }
+
+    @Override
+    public String toString() {
+        return "ChickenCoop{" +
+                "chickens=" + chickens +
+                '}';
+    }
 }
