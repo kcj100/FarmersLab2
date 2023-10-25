@@ -39,6 +39,9 @@ public abstract class   Vehicle implements Rideable, NoiseMaker {
         return inUse;
     }
     @Override
-    public void makeNoise () ;
+    public void makeNoise () {
+        System.out.println(getSound());
+    }
+
     }
 

@@ -31,9 +31,7 @@ public class CropDuster extends Aircraft {
             cropRow.fertilizeAllCrops();
         }
     }
-    public void makeNoise () {
-        System.out.println(getSound());
-    }
+
 
     }
 
