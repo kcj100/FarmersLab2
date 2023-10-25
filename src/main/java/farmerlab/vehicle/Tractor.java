@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Tractor extends Vehicle implements FarmVehicle {
 
 
-    public Tractor(String name, int id, String sound) {
-        super(name, id, sound);
+    public Tractor(int id, String sound) {
+        super( id, sound);
     }
 
     public void harvest(Field field) {

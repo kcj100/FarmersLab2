@@ -1,21 +1,20 @@
 package farmerlab.vehicle;
 
 public class CropDuster extends Aircraft {
-    public CropDuster(String name) {
-        super(name);
+
+    public CropDuster( int id, String sound) {
+        super( id, sound);
     }
+
+    @Override
+    public void fly() {
+
+    }
+
 
     public void fertilize(){
 
     }
 
-    @Override
-    public boolean isInUse() {
-        return false;
-    }
 
-    @Override
-    public void setInUse(boolean available) {
-
-    }
 }

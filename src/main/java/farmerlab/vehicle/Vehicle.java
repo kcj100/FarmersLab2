@@ -6,23 +6,17 @@ import farmerlab.interfaces.Rideable;
 
 public abstract class   Vehicle implements Rideable, NoiseMaker {
     private boolean inUse = false;
-    private String name;
+
     private int id;
     private String sound;
 
-    public Vehicle(String name, int id, String sound) {
-        this.name = name;
+    public Vehicle( int id, String sound) {
+
         this.id = id;
         this.sound = sound;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getId() {
         return id;
@@ -47,6 +41,6 @@ public abstract class   Vehicle implements Rideable, NoiseMaker {
     }
     @Override
     public void makeNoise() {
-
+        System.out.println(getSound());
     }
 }
