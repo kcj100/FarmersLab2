@@ -1,11 +1,11 @@
 package farmerlab.vehicle;
 
-public class Aircraft extends Vehicle  {
-    public Aircraft(String name) {
-        super(name);
+public abstract class Aircraft extends Vehicle  {
+
+
+    public Aircraft( int id, String sound) {
+        super( id, sound);
     }
 
-    public void fly(){
-
-    };
+    public abstract void fly();
 }
