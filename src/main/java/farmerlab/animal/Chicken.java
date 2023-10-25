@@ -1,5 +1,6 @@
 package farmerlab.animal;
 
+import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.Produce;
 
 public class Chicken extends Animal implements Produce {

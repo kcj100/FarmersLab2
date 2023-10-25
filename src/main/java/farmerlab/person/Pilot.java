@@ -1,4 +1,39 @@
 package farmerlab.person;
 
-public class Pilot {
+import farmerlab.interfaces.Edible;
+
+public class Pilot extends Person {
+    private boolean canFly;
+
+    public Pilot(String name, boolean canFly) {
+        super(name);
+        this.canFly = canFly;
+    }
+
+    public boolean canFly() {
+        return canFly;
+    }
+
+    public void setCanFly(boolean canFly) {
+        this.canFly = canFly;
+    }
+
+    public static void main(String[] args) {
+        Pilot pilot = new Pilot("John Doe", true);
+        System.out.println("Pilot's name: " + pilot.getName());
+        System.out.println("Can the pilot fly? " + pilot.canFly());
+    }
+}
+
+
+
+    @Override
+    public void eat(Edible food) {
+
+    }
+
+    @Override
+    public void makeNoise() {
+
+    }
 }
