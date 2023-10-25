@@ -20,7 +20,12 @@ public abstract class Animal implements NoiseMaker, Eater {
         this.animalName = animalName;
     }
 
-    public abstract boolean makeNoise();
+    public void makeNoise(){
+        System.out.println(getAnimalName() + " make's a noise");
+    }
+
+//    public boolean getMakeNoise(){
+//    }
 
     @Override
     public void eat(Edible food){

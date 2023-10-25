@@ -10,12 +10,8 @@ public class Chicken extends Animal implements Produce {
         super(animalName);
     }
 
-    @Override
-    public boolean makeNoise() {
-        System.out.println(getAnimalName() + " makes a noise.");
-        return true;
-    }
-    
+
+
     public boolean gethasBeenFertilized(){
         return hasBeenFertilized;
     }

@@ -8,11 +8,7 @@ public class Horse extends Animal implements Rideable {
         super(animalName);
     }
 
-    @Override
-    public boolean makeNoise(){
-        System.out.println(getAnimalName() + " makes a noise");
-        return false;
-    }
+
 
     @Override
     public boolean isInUse() {
