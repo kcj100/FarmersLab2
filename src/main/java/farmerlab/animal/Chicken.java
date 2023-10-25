@@ -6,8 +6,9 @@ import farmerlab.interfaces.Produce;
 public class Chicken extends Animal implements Produce {
     private boolean hasBeenFertilized;
 
-    public Chicken(String animalName) {
+    public Chicken(String animalName, boolean hasBeenFertilized) {
         super(animalName);
+        this.hasBeenFertilized = hasBeenFertilized;
     }
 
     @Override
@@ -25,6 +26,7 @@ public class Chicken extends Animal implements Produce {
     public Edible yield(){
         if(!hasBeenFertilized){
             System.out.println(getAnimalName() + "has laid an Edible Egg");
+            hasBeenFertilized = true;
             return new Egg();
 
         }else{
