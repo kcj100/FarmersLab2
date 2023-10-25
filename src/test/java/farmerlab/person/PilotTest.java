@@ -18,7 +18,24 @@ class PilotTest {
 
     @Test
     void setCanFly() {
+        Pilot pilot2 = new Pilot("Julio");
 
+boolean expectedCanFly = true;
+
+pilot2.setCanFly(expectedCanFly);
+
+boolean actualCanFly = pilot2.canFly();
+
+assertEquals(expectedCanFly, actualCanFly);
 
     }
+
+    @Test
+    void makeNoise(){
+    Pilot pilot = new Pilot("Dante");
+    assertTrue(pilot.makeNoise());
+
+    }
+
+
 }

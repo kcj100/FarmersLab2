@@ -1,6 +1,5 @@
 package farmerlab.vehicle;
 
-import farmerlab.interfaces.FarmVehicle;
 import farmerlab.interfaces.NoiseMaker;
 import farmerlab.interfaces.Rideable;
 
@@ -21,7 +20,8 @@ public abstract class   Vehicle implements Rideable, NoiseMaker {
     }
 
     @Override
-    public void makeNoise() {
+    public boolean makeNoise() {
 
+        return false;
     }
 }

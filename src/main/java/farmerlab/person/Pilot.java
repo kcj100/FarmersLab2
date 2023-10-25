@@ -17,22 +17,15 @@ public class Pilot extends Person {
         this.canFly = canFly;
     }
 
-    public static void main(String[] args) {
-        Pilot pilot = new Pilot("John Doe");
-        System.out.println("Pilot's name: " + pilot.getName());
-        System.out.println("Can the pilot fly? " + pilot.canFly());
-    }
-}
-
-
 
     @Override
     public void eat(Edible food) {
-
+        food.consume();
     }
 
     @Override
-    public void makeNoise() {
+    public boolean makeNoise() {
 
+        return false;
     }
 }
