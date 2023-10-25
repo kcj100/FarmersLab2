@@ -26,11 +26,10 @@ class CropRowTest {
          */
         ArrayList<Crop> cropRow = new ArrayList<>();
         Crop tomato = new TomatoPlant(true, true);
-        Crop corn = new Corn();
         Crop cornStalk = new CornStalk(true, true);
-        cropRow.add(Crop);
-        cropRow.add(CornStalk);
-        cropRow.add
+        cropRow.add(cornStalk);
+        cropRow.add(tomato);
+
 
     }
 
