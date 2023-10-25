@@ -8,4 +8,14 @@ public class CropDuster extends Aircraft {
     public void fertilize(){
 
     }
+
+    @Override
+    public boolean isInUse() {
+        return false;
+    }
+
+    @Override
+    public void setInUse(boolean available) {
+
+    }
 }

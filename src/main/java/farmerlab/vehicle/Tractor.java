@@ -1,14 +1,35 @@
 package farmerlab.vehicle;
 
+import farmerlab.farm.CropRow;
+import farmerlab.farm.Field;
 import farmerlab.interfaces.FarmVehicle;
 
+import java.util.ArrayList;
+
 public class Tractor extends Vehicle implements FarmVehicle {
-    public Tractor(String name) {
-        super(name);
+
+
+    public Tractor(String name, int id, String sound) {
+        super(name, id, sound);
     }
 
-    @Override
-    public void operate() {
+    public void harvest(Field field) {
+        if (isInUse()) {
+            System.out.println("The farmer is currently using the tractor to harvest the field.");
+            ArrayList<CropRow> cropRows = field.getCropRows();
 
+            for (CropRow cropRow : cropRows) {
+                cropRow.harvestAllCrops();
+            }
+        } else {
+            System.out.println("The tractor cannot be used for harvesting the field because there is no rider available.");
+        }
+    }
+
+
+
+    public void operate(boolean inUse) {
+        setInUse(inUse);
     }
 }
+
