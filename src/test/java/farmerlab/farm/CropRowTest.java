@@ -28,8 +28,10 @@ class CropRowTest {
         assert get.croprow {should return new earcorn/tomato instance or should print new earcorn/tomato}
          */
         ArrayList<Crop> cropRow = new ArrayList<>();
-//        cropRow.add(TomatoPlant);
-//        cropRow.add();
+        Crop tomato = new TomatoPlant(true, true);
+        cropRow.add(Crop);
+        cropRow.add(CornStalk);
+        cropRow.add
 
     }
 
