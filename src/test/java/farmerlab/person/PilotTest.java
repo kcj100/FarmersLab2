@@ -1,5 +1,6 @@
 package farmerlab.person;
 
+import farmerlab.interfaces.Edible;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,6 +30,19 @@ boolean actualCanFly = pilot2.canFly();
 assertEquals(expectedCanFly, actualCanFly);
 
     }
+
+   @Test
+   void eat(){
+       Pilot pilot = new Pilot("John Doe");
+       Edible food = new Edible() {};
+
+       pilot.eat(food);
+
+       assertTrue(food.isConsumed());
+   }
+
+
+
 
     @Test
     void makeNoise(){
