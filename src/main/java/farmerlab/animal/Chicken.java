@@ -21,18 +21,12 @@ public class Chicken extends Animal implements Produce {
         this.hasBeenFertilized = fertilized;
     }
 
-    public void layEgg(){
-        if(!hasBeenFertilized){
-            System.out.println(getAnimalName() + "has laid an Edible Egg");
-        }else{
-            System.out.println("Can't lay egg. Egg has been fertilized.");
-        }
-    }
-
     @Override
     public Edible yield(){
         if(!hasBeenFertilized){
+            System.out.println(getAnimalName() + "has laid an Edible Egg");
             return new Egg();
+
         }else{
             System.out.println(getAnimalName() + "has been flagged as true, can't yield egg it is fertilized");
             return null;

@@ -6,8 +6,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ChickenTest {
 
+
     @Test
     void makeNoise() {
+
     }
 
     @Test
@@ -18,9 +20,6 @@ class ChickenTest {
     void setHasBeenFertilized() {
     }
 
-    @Test
-    void layEgg() {
-    }
 
     @Test
     void yield() {
