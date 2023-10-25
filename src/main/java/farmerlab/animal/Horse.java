@@ -8,8 +8,6 @@ public class Horse extends Animal implements Rideable {
         super(animalName);
     }
 
-
-
     @Override
     public boolean isInUse() {
         return inUse;
@@ -17,6 +15,6 @@ public class Horse extends Animal implements Rideable {
 
     @Override
     public void setInUse(boolean available) {
-
+        this.inUse = available;
     }
 }
