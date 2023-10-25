@@ -5,8 +5,10 @@ public class TomatoPlant extends Crop{
         super(hasBeenHavested, hasBeenFertilized);
     }
 
-//    public Tomato yield(){
-//        Crop tomato = Tomato;
-//        return tomato;
-//    }
+    @Override
+    public Crop plant(Crop crop) {
+        return crop;
+    }
+
+
 }

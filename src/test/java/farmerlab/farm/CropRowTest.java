@@ -7,6 +7,8 @@ import farmerlab.crop.TomatoPlant;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CropRowTest {
@@ -25,8 +27,9 @@ class CropRowTest {
         create new croprow
         assert get.croprow {should return new earcorn/tomato instance or should print new earcorn/tomato}
          */
-        CropRow cropRow = new CropRow();
-       // Assertions.
+        ArrayList<Crop> cropRow = new ArrayList<>();
+//        cropRow.add(TomatoPlant);
+//        cropRow.add();
 
     }
 

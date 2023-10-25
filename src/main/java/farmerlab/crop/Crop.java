@@ -7,14 +7,14 @@ import farmerlab.interfaces.Produce;
 
 public abstract class Crop implements Produce, Botanist {
 
-    private boolean hasBeenHavested = false;
+    private boolean hasBeenHarvested = false;
 
     private  boolean hasBeenFertilized = false;
 
      CropRow cropRow;
 
     public Crop(boolean hasBeenHavested, boolean hasBeenFertilized) {
-        this.hasBeenHavested = hasBeenHavested;
+        this.hasBeenHarvested = hasBeenHavested;
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
@@ -24,14 +24,14 @@ public abstract class Crop implements Produce, Botanist {
         return null;
     }
 
-    public boolean isHasBeenHavested() {
+    public boolean isHasBeenHarvested() {
 
-        return hasBeenHavested;
+        return hasBeenHarvested;
     }
 
-    public void setHasBeenHavested(boolean hasBeenHavested) {
+    public void setHasBeenHarvested(boolean hasBeenHarvested) {
 
-        this.hasBeenHavested = hasBeenHavested;
+        this.hasBeenHarvested = hasBeenHarvested;
     }
 
     public boolean isHasBeenFertilized() {

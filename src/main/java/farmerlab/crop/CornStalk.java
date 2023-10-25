@@ -14,7 +14,14 @@ public class CornStalk extends Crop{
         return new Corn();
     }
 
-public class CornStalk {
+    @Override
+    public Crop plant(Crop crop) {
+        return null;
+    }
+
+//public class CornStalk {
+//
+//}
 
 
 }
