@@ -35,10 +35,12 @@ public abstract class Crop implements Produce, Botanist {
     }
 
     public boolean isHasBeenFertilized() {
+
         return hasBeenFertilized;
     }
 
     public void setHasBeenFertilized(boolean hasBeenFertilized) {
+
         this.hasBeenFertilized = hasBeenFertilized;
     }
 }
