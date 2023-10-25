@@ -30,5 +30,15 @@ class FarmHouseTest {
 
     @Test
     void addFarmHand() {
+//        FarmHouse farmHouse = new FarmHouse();
+//
+//        assertEquals(0, farmHouse.getFarmHands().size());
+//
+//        FarmHouse.Person person = farmHouse.new Person("Wick");
+//        farmHouse.addFarmHand(person);
+//
+//        assertEquals(1, farmHouse.getFarmHands().size());
+//        assertEquals(person, farmHouse.getFarmHands().get(0));
+//
     }
 }
