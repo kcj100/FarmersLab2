@@ -26,7 +26,7 @@ class CropRowTest {
         assert get.croprow {should return new earcorn/tomato instance or should print new earcorn/tomato}
          */
         CropRow cropRow = new CropRow();
-        Assertions.
+       // Assertions.
 
     }
 
