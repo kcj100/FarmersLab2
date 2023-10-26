@@ -29,7 +29,7 @@ public abstract class Animal implements NoiseMaker, Eater {
 
     @Override
     public void eat(Edible food){
-        System.out.println(animalName + "is eating " + food.getClass().getSimpleName().toLowerCase());
+        System.out.println(animalName + " is eating " + food.getClass().getSimpleName().toLowerCase());
     }
 
 
