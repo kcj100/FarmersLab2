@@ -1,5 +1,7 @@
 package farmerlab.animal;
 
+import farmerlab.interfaces.Eater;
+import farmerlab.interfaces.NoiseMaker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,11 +31,14 @@ Animal animal2;
 
        animal2.setAnimalName("Dog");
        assertEquals("Dog", animal2.getAnimalName());
-
-
     }
-
     @Test
-    void eat() {
+    void testImplementation() {
+       assertTrue(animal1 instanceof Eater);
+       assertTrue(animal1 instanceof NoiseMaker);
+
+        assertTrue(animal2 instanceof Eater);
+        assertTrue(animal2 instanceof NoiseMaker);
+
     }
 }
