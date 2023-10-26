@@ -7,26 +7,23 @@ import java.util.ArrayList;
 public class CropRow {
 
 
-    private ArrayList<Crop> cropRows;
+    private ArrayList<Crop> crops = new ArrayList<>();
 
-
-    public CropRow() {
-        ArrayList<Crop> cropRows = new ArrayList<>();
-    }
 
     public void fertilizeAllCrops(){
 
 
-            for(Crop i : cropRows){
-                i.setHasBeenHarvested(true);
-
+            for(Crop i : crops){
+                i.setHasBeenHarvested(false);
+                i.setHasBeenFertilized(true);
             }
         System.out.println("All crops have been fertilized");
     }
 
     public void harvestAllCrops(){
-        for (Crop crop : cropRows){
+        for (Crop crop : crops){
             crop.setHasBeenFertilized(true);
+            crop.setHasBeenFertilized(false);
         }
         System.out.println("All crops have been harvested");
 
@@ -34,20 +31,17 @@ public class CropRow {
 
 
     public void addCrop(Crop cropName){
-        cropRows.add(cropName);
+        crops.add(cropName);
     }
 
 
 
-//    public ArrayList<Crop> getCropRow(){
-//
-//        return ArrayList<Field> cropRows;
-//    }
+    public ArrayList<Crop> getCropRow(){
 
-
-    public void setCropRow(ArrayList<Crop> row){
-
+        return crops;
     }
+
+
 
 
 

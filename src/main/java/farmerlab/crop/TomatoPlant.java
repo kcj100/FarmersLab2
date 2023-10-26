@@ -2,21 +2,19 @@ package farmerlab.crop;
 
 public class TomatoPlant extends Crop{
 
-    private boolean hasBeenHarvested = false;
 
-    private  boolean hasBeenFertilized = false;
-
-    Tomato tomato;
 
     public TomatoPlant() {
-        this.hasBeenHarvested = hasBeenHarvested;
-        this.hasBeenFertilized = hasBeenFertilized;
+        super(false, false);
+
     }
 
     public Tomato yield(){
         if(isHasBeenFertilized()){
-           if(isHasBeenHarvested()){
+           if(!isHasBeenHarvested()){
                System.out.println("Tomato plant has been harvested");
+               setHasBeenFertilized(false);
+               return new Tomato();
            } else {
                System.out.println("Tomato plant has not been harvested");
            }

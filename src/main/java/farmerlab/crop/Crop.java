@@ -7,11 +7,14 @@ import farmerlab.interfaces.Produce;
 
 public abstract class Crop implements Produce {
 
-    private boolean hasBeenHarvested = false;
+    private boolean hasBeenHarvested;
 
-    private  boolean hasBeenFertilized = false;
+    private  boolean hasBeenFertilized;
 
-
+    public Crop(boolean hasBeenHarvested, boolean hasBeenFertilized) {
+        this.hasBeenHarvested = hasBeenHarvested;
+        this.hasBeenFertilized = hasBeenFertilized;
+    }
 
     public boolean isHasBeenHarvested() {
 
