@@ -19,7 +19,6 @@ public class Farmer extends  Person implements Botanist, Rider {
 
     }
 
-
     @Override
     public boolean makeNoise() {
         System.out.println("This Farmer makes noise");
@@ -33,11 +32,21 @@ public class Farmer extends  Person implements Botanist, Rider {
 
     @Override
     public void mount(Rideable ride) {
-
+        if (ride.isInUse()) {
+            ride.setInUse(true);
+            System.out.println("The ride is mounted");
+        } else {
+            System.out.println("Cannot mount the ride");
+        }
     }
 
     @Override
     public void dismount(Rideable ride) {
-
+        if (ride.isInUse()) {
+            ride.setInUse(false);
+            System.out.println("Dismounted from the ride.");
+        } else {
+            System.out.println("No ride to dismount from.");
+        }
     }
 }

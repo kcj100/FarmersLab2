@@ -1,8 +1,10 @@
 package farmerlab.person;
 
+import farmerlab.farm.Field;
 import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.Rideable;
 import farmerlab.interfaces.Rider;
+import farmerlab.vehicle.CropDuster;
 
 
 public class Pilot extends Person implements Rider {
@@ -30,6 +32,9 @@ private boolean isRiding;
         isRiding = riding;
     }
 
+    public void fly(CropDuster cropDuster, Field field) {
+
+    }
     @Override
     public void eat(Edible food) {
         food.eat();
@@ -43,11 +48,21 @@ private boolean isRiding;
 
     @Override
     public void mount(Rideable ride) {
-
+        if (ride.isInUse()) {
+            ride.setInUse(true);
+            System.out.println("The ride is mounted");
+        } else {
+            System.out.println("Cannot mount the ride");
+        }
     }
 
     @Override
     public void dismount(Rideable ride) {
-
+        if (ride.isInUse()) {
+            ride.setInUse(false);
+            System.out.println("Dismounted from the ride.");
+        } else {
+            System.out.println("No ride to dismount from.");
+        }
     }
 }
