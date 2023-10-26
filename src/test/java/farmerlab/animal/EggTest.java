@@ -1,17 +1,28 @@
 package farmerlab.animal;
 
 import farmerlab.interfaces.Edible;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class EggTest {
+Egg egg1;
 
+    @BeforeEach
+    public void setUp(){
+        Egg egg1 = new Egg();
+
+    }
     @Test
-   void testIfEdible(){
-        Egg egg = new Egg();
-        assertTrue(egg instanceof Edible);
+   void testImplementation(){
+        assertTrue(egg1 instanceof Edible);
     }
 
+    @Test
+    void testIfEdible(){
+        assertTrue(egg1.isEdible());
+
+    }
 
 }
