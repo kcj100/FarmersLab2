@@ -2,9 +2,9 @@ package farmerlab.interfaces;
 
 public interface Edible {
 
-//    public boolean getIfEdible();
+    public boolean getIfEdible();
 
-    void eat();
+//    void eater();
 
 
 

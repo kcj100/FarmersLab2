@@ -20,7 +20,7 @@ public class Pilot extends Person {
 
     @Override
     public void eat(Edible food) {
-        food.eat();
+        food.eater();
     }
 
     @Override

@@ -11,33 +11,54 @@ import static org.junit.jupiter.api.Assertions.*;
 class CropRowTest {
 
     @Test
-    void addCrop() {
-        Crop newCornStalk = new CornStalk(true, true);
-        Crop newTomato = new TomatoPlant(false, true);
+    void TestaddCrop() {
+        Crop newCornStalk = new CornStalk();
+        Crop newTomato = new TomatoPlant();
         Assertions.assertTrue(newTomato.isHasBeenFertilized() == false);
 
     }
 
     @Test
-    void returnCropRow() {
-        /*
-        create new croprow
-        assert get.croprow {should return new earcorn/tomato instance or should print new earcorn/tomato}
-         */
+    void testFertilizeAllCrops() {
+
         ArrayList<Crop> cropRow = new ArrayList<>();
-        Crop tomato = new TomatoPlant(true, true);
-        Crop cornStalk = new CornStalk(true, true);
+        Crop tomato = new TomatoPlant();
+        Crop cornStalk = new CornStalk();
+        //Crop corn = new Corn();
         cropRow.add(cornStalk);
         cropRow.add(tomato);
 
+        CropRow crops = new CropRow();
+        crops.setCropRow(cropRow);
+
+        crops.fertilizeAllCrops();
+
+//        for (Crop crop : cropRow){
+//            assertTrue(crop.isHasBeenFertilized());
+//        }
+
 
     }
 
     @Test
-    void setCropRow() {
+    void testHarvestAllCrops() {
+
+        ArrayList<Crop> cropRow = new ArrayList<>();
+        Crop tomato = new TomatoPlant();
+        Crop cornStalk = new CornStalk();
+        //Crop corn = new Corn();
+        cropRow.add(cornStalk);
+        cropRow.add(tomato);
+
+        CropRow crops = new CropRow();
+        crops.setCropRow(cropRow);
+
+        crops.harvestAllCrops();
+
+//        for (Crop crop : cropRow){
+//            assertTrue(crop.isHasBeenHarvested());
+//        }
     }
 
-    @Test
-    void getRowNumber() {
-    }
+
 }

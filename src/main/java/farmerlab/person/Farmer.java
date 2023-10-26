@@ -13,7 +13,7 @@ public class Farmer extends  Person{
 
     @Override
     public void eat(Edible food) {
-        food.eat();
+        food.eater();
 
     }
 

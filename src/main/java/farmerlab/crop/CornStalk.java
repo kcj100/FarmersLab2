@@ -5,23 +5,36 @@ import farmerlab.interfaces.Edible;
 
 public class CornStalk extends Crop{
 
+    private boolean hasBeenHarvested = false;
 
-    public CornStalk(boolean hasBeenHavested, boolean hasBeenFertilized) {
-        super(hasBeenHavested, hasBeenFertilized);
+    private  boolean hasBeenFertilized = false;
+
+    public CornStalk() {
+        this.hasBeenHarvested = hasBeenHarvested;
+        this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    public Edible yield() {
-        return new Corn();
-    }
 
-    @Override
-    public Crop plant(Crop crop) {
+
+
+    public Corn yield(){
+        if(isHasBeenFertilized()){
+            if(isHasBeenHarvested()){
+                System.out.println("CornStalk plant has been harvested");
+            } else {
+                System.out.println("CornStalk plant has not been harvested");
+            }
+        }
         return null;
+
     }
 
-//public class CornStalk {
-//
-//}
+//    public Edible yield() {
+//        return new Corn();
+//    }
+
+
+
 
 
 }

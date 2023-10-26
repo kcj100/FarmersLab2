@@ -9,10 +9,14 @@ public class CropRow {
 
     private ArrayList<Crop> cropRows;
 
-    Field field;
 
+    public CropRow() {
+        ArrayList<Crop> cropRows = new ArrayList<>();
+    }
 
     public void fertilizeAllCrops(){
+
+
             for(Crop i : cropRows){
                 i.setHasBeenHarvested(true);
 
@@ -30,15 +34,15 @@ public class CropRow {
 
 
     public void addCrop(Crop cropName){
-        System.out.println(cropName);
+        cropRows.add(cropName);
     }
 
 
 
-    public ArrayList<Crop> getCropRow(){
-
-        return new ArrayList<>();
-    }
+//    public ArrayList<Crop> getCropRow(){
+//
+//        return ArrayList<Field> cropRows;
+//    }
 
 
     public void setCropRow(ArrayList<Crop> row){
