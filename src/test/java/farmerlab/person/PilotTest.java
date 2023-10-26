@@ -1,41 +1,65 @@
 package farmerlab.person;
 
+import farmerlab.interfaces.Edible;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PilotTest {
 
-    @Test
-    void canFly() {
-        Pilot pilot = new Pilot("Dante");
-        pilot.canFly();
-        boolean expectedResult = true;
-        boolean actualResult = pilot.canFly();
 
-        assertEquals(expectedResult, actualResult);
-    }
 
-    @Test
-    void setCanFly() {
-        Pilot pilot2 = new Pilot("Julio");
+   @Test
+   void eat(){
+       Pilot pilot = new Pilot("James", "Get ready for flight", 225565);
+       Edible food = new Edible() {};
 
-boolean expectedCanFly = true;
+       pilot.eat(food);
 
-pilot2.setCanFly(expectedCanFly);
+       assertTrue(food.isEaten());
+   }
 
-boolean actualCanFly = pilot2.canFly();
 
-assertEquals(expectedCanFly, actualCanFly);
 
-    }
 
     @Test
     void makeNoise(){
-    Pilot pilot = new Pilot("Dante");
+    Pilot pilot = new Pilot("Dante", "Ready for takeoff", 5554210);
     assertTrue(pilot.makeNoise());
 
     }
+@Test
+    void testGetLicenseID(){
 
+    long expectedLicenseID = 5554210;
+    Pilot license = new Pilot("Dante", "Ready for takeoff", expectedLicenseID);
 
+    long actualLicenseID = license.getLicenseID();
+
+    assertEquals(expectedLicenseID, actualLicenseID);
+}
+
+@Test
+    void setLicenseID(){
+
+    long expectedLicenseID = 254878;
+       Pilot license = new Pilot("Jack", "Blastoff!!", expectedLicenseID);
+
+    license.setLicenseID(expectedLicenseID);
+
+    long actualLicenseID = license.getLicenseID();
+    assertEquals(expectedLicenseID, actualLicenseID);
+}
+
+@Test
+void    isRiding(){
+
+    Pilot  pilot = new Pilot("Tyrone", "Lets ride", 182571);
+
+    pilot.setRiding(true);
+    assertTrue(pilot.isRiding());
+
+    pilot.setRiding(false);
+    assertFalse(pilot.isRiding());
+}
 }
