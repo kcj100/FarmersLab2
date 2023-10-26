@@ -15,8 +15,8 @@ Horse horse2;
    }
   @Test
   void testConstructor(){
-       assertEquals("horse1", horse1.getAnimalName());
-       assertEquals("horse2",horse2.getAnimalName());
+       assertEquals("Horse1", horse1.getAnimalName());
+       assertEquals("Horse2",horse2.getAnimalName());
   }
     @Test
     void testIsInUse() {
