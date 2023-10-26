@@ -8,5 +8,5 @@ public class Egg implements Edible {
     public boolean isEdible() {
         return isEdible;
     }
-    
+
 }
