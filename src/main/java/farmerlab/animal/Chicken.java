@@ -10,8 +10,6 @@ public class Chicken extends Animal implements Produce {
         super(animalName);
     }
 
-
-
     public boolean gethasBeenFertilized(){
         return hasBeenFertilized;
     }
