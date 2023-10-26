@@ -10,7 +10,7 @@ Horse horse1;
 Horse horse2;
    @BeforeEach
    public void setUp(){
-       Horse horse1 = new Horse("Horse1 1");
+       Horse horse1 = new Horse("Horse1");
        Horse horse2 = new Horse("Horse2");
    }
   @Test
@@ -18,10 +18,6 @@ Horse horse2;
        assertEquals("horse1", horse1.getAnimalName());
        assertEquals("horse2",horse2.getAnimalName());
   }
-    @Test
-    public void testMakeNoise() {
-    }
-
     @Test
     void testIsInUse() {
        assertFalse(horse1.isInUse());
