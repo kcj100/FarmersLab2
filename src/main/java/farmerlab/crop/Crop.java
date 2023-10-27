@@ -5,40 +5,34 @@ import farmerlab.interfaces.Botanist;
 import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.Produce;
 
-public abstract class Crop implements Produce, Botanist {
+public abstract class Crop implements Produce {
 
-    private boolean hasBeenHavested = false;
+    private boolean hasBeenHarvested;
 
-    private  boolean hasBeenFertilized = false;
+    private  boolean hasBeenFertilized;
 
-     CropRow cropRow;
-
-    public Crop(boolean hasBeenHavested, boolean hasBeenFertilized) {
-        this.hasBeenHavested = hasBeenHavested;
+    public Crop(boolean hasBeenHarvested, boolean hasBeenFertilized) {
+        this.hasBeenHarvested = hasBeenHarvested;
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    @Override
-    public Edible yield() {
+    public boolean isHasBeenHarvested() {
 
-        return null;
+        return hasBeenHarvested;
     }
 
-    public boolean isHasBeenHavested() {
+    public void setHasBeenHarvested(boolean hasBeenHarvested) {
 
-        return hasBeenHavested;
-    }
-
-    public void setHasBeenHavested(boolean hasBeenHavested) {
-
-        this.hasBeenHavested = hasBeenHavested;
+        this.hasBeenHarvested = hasBeenHarvested;
     }
 
     public boolean isHasBeenFertilized() {
+
         return hasBeenFertilized;
     }
 
     public void setHasBeenFertilized(boolean hasBeenFertilized) {
+
         this.hasBeenFertilized = hasBeenFertilized;
     }
 }

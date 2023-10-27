@@ -1,12 +1,26 @@
 package farmerlab.crop;
 
 public class TomatoPlant extends Crop{
-    public TomatoPlant(boolean hasBeenHavested, boolean hasBeenFertilized) {
-        super(hasBeenHavested, hasBeenFertilized);
+
+
+
+    public TomatoPlant() {
+        super(false, false);
+
     }
 
     public Tomato yield(){
-        Crop tomato = Tomato;
-        return tomato;
+        if(isHasBeenFertilized()){
+           if(!isHasBeenHarvested()){
+               System.out.println("Tomato plant has been harvested");
+               setHasBeenFertilized(false);
+               return new Tomato();
+           } else {
+               System.out.println("Tomato plant has not been harvested");
+           }
+        }
+        return null;
     }
+
+
 }
