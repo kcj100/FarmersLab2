@@ -37,7 +37,15 @@ private boolean isRiding;
     }
     @Override
     public void eat(Edible food) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        food.eater();
+=======
         food.eat();
+>>>>>>> TestBranch
+=======
+        food.eat();
+>>>>>>> TestBranch
     }
 
     @Override
