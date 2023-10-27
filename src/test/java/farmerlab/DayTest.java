@@ -1,12 +1,8 @@
 package farmerlab;
 
-import farmerlab.farm.Farm;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class WeeklyScheduleTest {
+class DayTest {
 
     @Test
     void sunday() {
