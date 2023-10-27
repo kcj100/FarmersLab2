@@ -23,6 +23,7 @@ class StableTest {
         ArrayList<Horse> horses = new ArrayList<>();
 
         Horse horse1 = new Horse("Speed");
+        horses.add(horse1);
         stable.addHorse(horse1);
 
         assertArrayEquals(horses.toArray(), stable.getHorses().toArray());
@@ -35,6 +36,7 @@ class StableTest {
 
         Horse horse1 = new Horse("Shadow");
         horsesArray.add(horse1);
+        stable.addHorse(horse1);
 
         assertEquals(horsesArray.size(), stable.getHorses().size());
         assertEquals(horse1, stable.getHorses().get(0));
