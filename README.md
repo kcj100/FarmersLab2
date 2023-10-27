@@ -74,7 +74,7 @@ As a team, fork this repository to an Organization and submit the URL of your fo
 		* On `Tuesday`, `Froilan` uses his `Tractor` to `harvest` each `Crop` in each `CropRow`.
 	## Custom days
   * On `Wednesday` , `Froilan` will `plant` again, 5 crops across all crop rows.
-  * On `Thursday`, `Froilanda` once again fertilizes the `Field` with `CropDuster`.
+  * On `Thursday`, `Froilanda` once again will `fertilize` the `Field` with `CropDuster`.
   * On `Friday`, `Froilan` will `harvest` with the `Tractor` across the `Field`
   * On `Saturday`, `Froilan` and `Froilanda` take a day off and make their favorite phrase
 	(`makeNoise` method is called).
