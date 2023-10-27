@@ -72,6 +72,13 @@ As a team, fork this repository to an Organization and submit the URL of your fo
 		* `Sunday`, `Froilan` plants 3 different type of `Crop` in his first, second, and third `CropRow`.
 		* On `Monday`, his sister, `Froilanda` uses the `CropDuster` to `fly` over the `Field` and `fertilize` each of the `CropRow`
 		* On `Tuesday`, `Froilan` uses his `Tractor` to `harvest` each `Crop` in each `CropRow`.
+	## Custom days
+  * On `Wednesday` , `Froilan` will `plant` again, 5 crops across all crop rows.
+  * On `Thursday`, `Froilanda` once again fertilizes the `Field` with `CropDuster`.
+  * On `Friday`, `Froilan` will `harvest` with the `Tractor` across the `Field`
+  * On `Saturday`, `Froilan` and `Froilanda` take a day off and make their favorite phrase
+	(`makeNoise` method is called).
 
+<strong>Note:</strong> `morningRoutine` must be called everyday first!!!
 # Planning & Execution of Design: 
   * ask yourselves: "How do we apply **Generics** to implement our design CLEANLY?"
