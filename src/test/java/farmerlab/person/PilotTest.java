@@ -12,22 +12,23 @@ class PilotTest {
    @Test
    void eat(){
        Pilot pilot = new Pilot("James", "Get ready for flight", 225565);
-       Edible food = new Edible() {};
+       Edible food = new Edible() {
+           @Override
+           public boolean getIfEdible() {
+               return false;
+           }
+       };
+
 
        pilot.eat(food);
 
-       assertTrue(food.isEaten());
+       assertTrue(food.getIfEdible());
+
+
    }
 
 
 
-
-    @Test
-    void makeNoise(){
-    Pilot pilot = new Pilot("Dante", "Ready for takeoff", 5554210);
-    assertTrue(pilot.makeNoise());
-
-    }
 @Test
     void testGetLicenseID(){
 

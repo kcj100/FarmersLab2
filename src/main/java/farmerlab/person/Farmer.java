@@ -1,10 +1,9 @@
 package farmerlab.person;
 
+import farmerlab.animal.Horse;
 import farmerlab.crop.Crop;
-import farmerlab.interfaces.Botanist;
-import farmerlab.interfaces.Edible;
-import farmerlab.interfaces.Rideable;
-import farmerlab.interfaces.Rider;
+import farmerlab.interfaces.*;
+import farmerlab.vehicle.Tractor;
 
 public class Farmer extends  Person implements Botanist, Rider {
 
@@ -15,14 +14,14 @@ public class Farmer extends  Person implements Botanist, Rider {
 
     @Override
     public void eat(Edible food) {
-        food.eat();
+        food.getIfEdible();
 
     }
 
     @Override
-    public boolean makeNoise() {
+    public void makeNoise() {
         System.out.println("This Farmer makes noise");
-        return false;
+
     }
 
     @Override
@@ -32,21 +31,56 @@ public class Farmer extends  Person implements Botanist, Rider {
 
     @Override
     public void mount(Rideable ride) {
-        if (ride.isInUse()) {
-            ride.setInUse(true);
-            System.out.println("The ride is mounted");
-        } else {
-            System.out.println("Cannot mount the ride");
+
+        if (ride instanceof FarmVehicle) {
+
+            if (ride instanceof Tractor) {
+                if (!ride.isInUse()) {
+                    ride.setInUse(true);
+                    System.out.println("The ride is mounted");
+
+                    ((Tractor) ride).operate(true);
+                    System.out.println("Tractor is mounted");
+                } else {
+                    System.out.println("The tractor is in use and can not be mounted");
+                }
+
+            } else if (ride instanceof Horse) {
+                if (!ride.isInUse()) {
+                    ride.setInUse(true);
+                    System.out.println("The horse is mounted");
+                } else {
+                    System.out.println("The horse is in use and can not be mounted");
+                }
+            }
+
         }
     }
 
     @Override
     public void dismount(Rideable ride) {
-        if (ride.isInUse()) {
-            ride.setInUse(false);
-            System.out.println("Dismounted from the ride.");
-        } else {
-            System.out.println("No ride to dismount from.");
+        if (ride instanceof FarmVehicle) {
+
+            if (ride instanceof Tractor) {
+                if (ride.isInUse()) {
+                    ride.setInUse(false);
+                    System.out.println("The ride is dismounted");
+
+                    ((Tractor) ride).operate(false);
+                    System.out.println("Tractor is dismounted");
+                } else {
+                    System.out.println("The tractor is not in use and can be mounted");
+                }
+
+            } else if (ride instanceof Horse) {
+                if (ride.isInUse()) {
+                    ride.setInUse(false);
+                    System.out.println("The horse is dismounted");
+                } else {
+                    System.out.println("The horse is not in use and can be mounted");
+                }
+            }
+
         }
     }
 }
