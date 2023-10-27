@@ -10,9 +10,6 @@ public class FarmHouse {
         farmHands = new ArrayList<>();
 
     }
-    public void setFarmHands(ArrayList<Person> farmHands) {
-        this.farmHands = farmHands;
-    }
     public ArrayList<Person> getFarmHands() {
         return farmHands;
     }
