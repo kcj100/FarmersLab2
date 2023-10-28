@@ -1,5 +1,6 @@
 package farmerlab.person;
 
+import farmerlab.crop.Tomato;
 import farmerlab.interfaces.Edible;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +20,7 @@ class FarmerTest {
     @Test
     void testEat() {
         Farmer farmer = new Farmer("Dante", "The roosters are singing");
-        Edible food = new Edible() {
+        Tomato food = new Tomato() {
         };
 
         farmer.eat(food);
