@@ -20,8 +20,8 @@ Egg egg1;
     }
 
     @Test
-    void testIfEdible(){
-        assertTrue(egg1.isEdible());
+    void testGetIfEdible(){
+        assertTrue(egg1.getIfEdible());
 
     }
 

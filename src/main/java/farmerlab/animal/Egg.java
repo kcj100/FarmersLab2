@@ -5,7 +5,7 @@ import farmerlab.interfaces.Edible;
 public class Egg implements Edible {
     private final boolean isEdible = true;
 
-    public boolean isEdible() {
+    public boolean getIfEdible() {
         return isEdible;
     }
 
