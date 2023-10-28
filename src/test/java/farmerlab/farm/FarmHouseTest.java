@@ -25,11 +25,12 @@ class FarmHouseTest {
 
         ArrayList<Person> people = new ArrayList<>();
 
-        Person person1 = new Pilot("John");
+        Person person1 = new Pilot("John","Yeha!", 5768);
         people.add(person1);
 
         farmHouse.addFarmHand(person1);
         assertEquals(people.size(), farmHouse.getFarmHands().size());
+        assertArrayEquals(people.toArray(),farmHouse.getFarmHands().toArray());
 
 
 
@@ -40,7 +41,7 @@ class FarmHouseTest {
 
         assertEquals(0, farmHouse.getFarmHands().size());
 
-        Person person = new Farmer("Wick");
+        Person person = new Farmer("Wick","GoshDarn");
         farmHouse.addFarmHand(person);
 
         assertEquals(1, farmHouse.getFarmHands().size());

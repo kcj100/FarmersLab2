@@ -20,12 +20,14 @@ class FieldTest {
     @Test
     void getCropRows() {
         assertEquals(0,field.getCropRows().size());
-        ArrayList<CropRow> field = new ArrayList<>();
+        ArrayList<CropRow> fieldExpected = new ArrayList<>();
 
         CropRow cropRow1 = new CropRow();
-        field.add(cropRow1);
+        fieldExpected.add(cropRow1);
+        field.addCropRow(cropRow1);
 
-        assertArrayEquals(field.toArray(), field.getCropRows().toArray());
+
+        assertArrayEquals(fieldExpected.toArray(), field.getCropRows().toArray());
 
     }
 
@@ -38,6 +40,6 @@ class FieldTest {
         fields.add(row1);
 
         assertEquals(fields.size(), field.getCropRows().size());
-        assertEquals(horse1, field.getCropRows().get(0));
+        assertEquals(row1, field.getCropRows().get(0));
     }
 }
