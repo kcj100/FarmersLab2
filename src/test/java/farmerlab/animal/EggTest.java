@@ -11,7 +11,7 @@ Egg egg1;
 
     @BeforeEach
     public void setUp(){
-        Egg egg1 = new Egg();
+        egg1 = new Egg();
 
     }
     @Test
@@ -20,8 +20,8 @@ Egg egg1;
     }
 
     @Test
-    void testIfEdible(){
-        assertTrue(egg1.isEdible());
+    void testGetIfEdible(){
+        assertTrue(egg1.getIfEdible());
 
     }
 

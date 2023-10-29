@@ -13,8 +13,8 @@ class ChickenTest {
     Chicken chicken2;
     @BeforeEach
     public void setUp(){
-        Chicken chicken1 = new Chicken("Chicken1");
-        Chicken chicken2 = new Chicken("Chicken2");
+        chicken1 = new Chicken("Chicken1");
+        chicken2 = new Chicken("Chicken2");
     }
     @Test
     public void testConstructor(){
