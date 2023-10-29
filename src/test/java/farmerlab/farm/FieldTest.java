@@ -40,7 +40,7 @@ class FieldTest {
         fields.add(row1);
         field.addCropRow(row1);
 
-        assertEquals(field.getCropRows(), field.getCropRows().size());
+        assertEquals(fields.size(), field.getCropRows().size());
         assertEquals(row1, field.getCropRows().get(0));
     }
 }
