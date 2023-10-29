@@ -22,7 +22,8 @@ class ChickenCoopTest {
         assertEquals(0, chickenCoop.getChickens().size());
         ArrayList<Chicken> chickens = new ArrayList<>();
 
-        Chicken chicken1 = new Chicken("Speedy", false);
+        Chicken chicken1 = new Chicken("Speedy");
+        chickens.add(chicken1);
         chickenCoop.addChicken(chicken1);
 
         assertArrayEquals(chickens.toArray(), chickenCoop.getChickens().toArray());
@@ -33,8 +34,9 @@ class ChickenCoopTest {
         assertEquals(0, chickenCoop.getChickens().size());
         ArrayList<Chicken> chickens = new ArrayList<>();
 
-        Chicken chicken1 = new Chicken("Big Red", true);
+        Chicken chicken1 = new Chicken("Big Red");
         chickens.add(chicken1);
+        chickenCoop.addChicken(chicken1);
 
         assertEquals(chickens.size(), chickenCoop.getChickens().size());
         assertEquals(chicken1, chickenCoop.getChickens().get(0));

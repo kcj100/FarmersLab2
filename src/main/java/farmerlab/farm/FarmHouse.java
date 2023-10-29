@@ -6,6 +6,11 @@ import java.util.ArrayList;
 
 public class FarmHouse {
     private ArrayList<Person> farmHands;
+
+    public FarmHouse(ArrayList<Person> farmHands) {
+        this.farmHands = farmHands;
+    }
+
     public FarmHouse() {
         farmHands = new ArrayList<>();
 

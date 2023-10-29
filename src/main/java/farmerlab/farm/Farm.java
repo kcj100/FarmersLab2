@@ -26,6 +26,9 @@ public class Farm {
     public FarmHouse getFarmHouse() {
         return farmHouse;
     }
+    public FarmHouse setFarmHouse(FarmHouse farmHouse){
+        return farmHouse;
+    }
     @Override
     public String toString() {
         return "Farm{" +
