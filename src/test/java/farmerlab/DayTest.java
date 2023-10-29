@@ -42,18 +42,23 @@ Plot plot = new Plot();
         Field field = new Field();
         Pilot froilanda = new Pilot("Dawn", "geronimo", 123);
 
-        cropRow.addCrop(Tomatoplant);
-        field.addCropRow(cropRow);
+        cropRow.addCrop(Tomatoplant); //Added a cropRow to CropRows
+        field.addCropRow(cropRow); //then proceeded to add the cropRow into field
 
         cropRow1.addCrop((CornStalk));
         field.addCropRow(cropRow);
 
-        froilanda.mount(cropDuster);
+        froilanda.mount(cropDuster); //had the pilot mount the cropDuster
         cropDuster.setInUse(true); //It should be assumed that it is in use when cropDuster is mounted.
-        cropDuster.fly(field);
+        cropDuster.fly(field); // Pilot flew cropDuster over field
 
 
         assertTrue(field.getCropRows().get(0).getCropRow().get(0).isHasBeenFertilized());
+        /*
+        We had entry to the field to gain access to cropRows
+         accessed the cropRow with the get() method
+         accessed a plant within that cropRow and ensured it was fertilized
+        */
         assertTrue(field.getCropRows().get(1).getCropRow().get(0).isHasBeenFertilized());
 
 

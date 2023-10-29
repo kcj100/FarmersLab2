@@ -21,42 +21,40 @@ class CropRowTest {
     @Test
     void testFertilizeAllCrops() {
 
-        ArrayList<Crop> cropRow = new ArrayList<>();
-        Crop tomato = new TomatoPlant();
+        CropRow cropRow = new CropRow(); //Creating a new cropRow
+        Crop tomato = new TomatoPlant(); //Creating new crops
         Crop cornStalk = new CornStalk();
-        //Crop corn = new Corn();
-        cropRow.add(cornStalk);
-        cropRow.add(tomato);
+        Crop tomato1 = new TomatoPlant();
+        cropRow.addCrop(tomato); //Adding crops to the cropRow
+        cropRow.addCrop(tomato1);
+        cropRow.addCrop(cornStalk);
 
-        CropRow crops = new CropRow();
-        crops.setCropRow(cropRow);
-
-        crops.fertilizeAllCrops();
-
-//        for (Crop crop : cropRow){
-//            assertTrue(crop.isHasBeenFertilized());
-//        }
+//Looped through the cropRow in order to fertilze all crops
+        for (Crop crop : cropRow.getCropRow()){
+            cropRow.fertilizeAllCrops();
+            assertTrue(crop.isHasBeenFertilized()); //Ensured the crops has been fertilized
+        }
 
 
     }
 
     @Test
     void testHarvestAllCrops() {
-
-        ArrayList<Crop> cropRow = new ArrayList<>();
+        CropRow cropRow = new CropRow();
         Crop tomato = new TomatoPlant();
         Crop cornStalk = new CornStalk();
-        //Crop corn = new Corn();
-        cropRow.add(cornStalk);
-        cropRow.add(tomato);
+        Crop tomato1 = new TomatoPlant();
+        cropRow.addCrop(tomato);
+        cropRow.addCrop(tomato1);
+        cropRow.addCrop(cornStalk);
 
-        CropRow crops = new CropRow();
+        cropRow.fertilizeAllCrops();
+        cropRow.harvestAllCrops();
 
-        crops.harvestAllCrops();
 
-//        for (Crop crop : cropRow){
-//            assertTrue(crop.isHasBeenHarvested());
-//        }
+        for (Crop crop : cropRow.getCropRow()){
+            assertTrue(crop.isHasBeenHarvested());
+        }
     }
 
 
