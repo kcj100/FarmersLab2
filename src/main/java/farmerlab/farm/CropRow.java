@@ -42,7 +42,7 @@ public class CropRow {
     }
 
 
+    public void setCropRow(ArrayList<Crop> cropRow) {
 
-
-
+    }
 }

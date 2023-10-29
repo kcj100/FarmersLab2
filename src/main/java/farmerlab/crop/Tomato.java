@@ -6,15 +6,6 @@ public class Tomato implements Edible {
 
     private boolean isEdible;
 
-//    @Override
-//    public boolean getIfEdible() {
-//        return false;
-//    }
-
-//    @Override
-//    public void eater() {
-//
-//    }
 
     public boolean isEdible() {
         return isEdible;
