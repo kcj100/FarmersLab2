@@ -14,6 +14,10 @@ public class CornStalk extends Crop{
 
 
     public Corn yield(){
+        //here you have a nested if condtion
+        // you can simply use && operator to combine
+        // if(isHasBeenFertilized && !isHasBeenFertilized)
+
         if(isHasBeenFertilized()){
             if(!isHasBeenHarvested()){
                 System.out.println("CornStalk plant has been harvested");

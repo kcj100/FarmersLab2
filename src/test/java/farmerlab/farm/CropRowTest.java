@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CropRowTest {
 
     @Test
-    void TestaddCrop() {
+    void testAddCrop() {
         Crop newCornStalk = new CornStalk();
         Crop newTomato = new TomatoPlant();
         Assertions.assertTrue(newTomato.isHasBeenFertilized() == false);
@@ -59,6 +59,7 @@ class CropRowTest {
 //            assertTrue(crop.isHasBeenHarvested());
 //        }
     }
+
 
 
 }
