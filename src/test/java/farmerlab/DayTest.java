@@ -3,17 +3,21 @@ package farmerlab;
 import farmerlab.animal.Horse;
 import farmerlab.farm.CropRow;
 import farmerlab.farm.Farm;
+import farmerlab.farm.Plot;
 import farmerlab.farm.Stable;
 import org.junit.jupiter.api.Test;
 
 class DayTest {
-
+Plot plot = new Plot();
     @Test
     void sunday() {
+plot.chicken
     }
 
     @Test
     void monday() {
+        Plot plot = new Plot();
+
     }
 
 //    @Test
