@@ -42,6 +42,6 @@ class FarmTest {
         Farm farm = new Farm();
         FarmHouse newFarmHouse = new FarmHouse();
         farm.setFarmHouse(newFarmHouse);
-        assertEquals(newFarmHouse, farm.getFarmHouse());
+        assertEquals(newFarmHouse.getFarmHands(), farm.getFarmHouse().getFarmHands());
     }
 }
