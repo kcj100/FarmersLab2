@@ -38,7 +38,7 @@ class StableTest {
         horsesArray.add(horse1);
         stable.addHorse(horse1);
 
-        assertEquals(stable.getHorses(), stable.getHorses().size());
+        assertEquals(horsesArray.size(), stable.getHorses().size());
         assertEquals(horse1, stable.getHorses().get(0));
     }
 }
