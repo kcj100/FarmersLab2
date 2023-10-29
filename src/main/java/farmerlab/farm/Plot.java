@@ -11,9 +11,45 @@ import farmerlab.vehicle.CropDuster;
 import farmerlab.vehicle.Tractor;
 
 public class Plot {
-    public Plot(){
-
+    public Plot(){ChickenCoop[] chickenCoops = new ChickenCoop[]{chickenCoop1, chickenCoop2, chickenCoop3};
+        Chicken[] chickens = new Chicken[]{chicken1, chicken2, chicken3, chicken4, chicken5, chicken6,
+                chicken7, chicken8, chicken9, chicken10, chicken11, chicken12, chicken13, chicken14, chicken15};
+        int counter = 0;
+        for (int j = 0; j < 15; j++) {
+            if (j == 5) {
+                counter++;
+            }
+            if (j == 10) {
+                counter++;
+            }
+            chickenCoops[counter].addChicken(chickens[j]);
+        }
+        Stable[] stables = new Stable[]{stable, stable2, stable3};
+        Horse[] horses = new Horse[]{horse1, horse2, horse3, horse4,
+                horse5, horse6, horse7, horse8, horse9, horse10};
+        counter = 0;
+        for (int j = 0; j < 10; j++) {
+            if (j == 3) {
+                counter++;
+            }
+            if (j == 6) {
+                counter++;
+            }
+            if(j == 9) {
+                stables[counter].addHorse(horse10);
+                break;
+            }
+            stables[counter].addHorse(horses[j]);
+        }
+        for (Stable stable : stables) {
+            farm.addStable(stable);
+        }
+        for(ChickenCoop chickenCoop : chickenCoops) {
+            farm.addChickenCoop(chickenCoop);
+        }
     }
+
+
     public Farm farm = new Farm();
     public Stable stable = new Stable();
     public Stable stable2 = new Stable();
@@ -61,8 +97,8 @@ public class Plot {
     public Horse horse8 = new Horse("Max");
     public Horse horse9 = new Horse("Sapphire");
     public Horse horse10 = new Horse("Apollo");
-    public Horse horse11 = new Horse("Duchess");
-    public Horse horse12 = new Horse("Romeo");
+    public Horse horse5 = new Horse("Duchess");
+    public Horse horse6 = new Horse("Romeo");
     public Horse horse1 = new Horse("Shadow");
     public Horse horse2 = new Horse("Thunder");
     public Horse horse3 = new Horse("Spirit");
