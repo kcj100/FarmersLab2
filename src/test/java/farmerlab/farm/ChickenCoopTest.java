@@ -38,7 +38,7 @@ class ChickenCoopTest {
         chickens.add(chicken1);
         chickenCoop.addChicken(chicken1);
 
-        assertEquals(chickens.size(), chickenCoop.getChickens().size());
+        assertEquals(chickenCoop.getChickens(), chickenCoop.getChickens().size());
         assertEquals(chicken1, chickenCoop.getChickens().get(0));
     }
 }

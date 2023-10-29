@@ -29,7 +29,7 @@ class FarmHouseTest {
         people.add(person1);
 
         farmHouse.addFarmHand(person1);
-        assertEquals(people.size(), farmHouse.getFarmHands().size());
+        assertEquals(farmHouse.getFarmHands(), farmHouse.getFarmHands().size());
         assertArrayEquals(people.toArray(),farmHouse.getFarmHands().toArray());
 
 

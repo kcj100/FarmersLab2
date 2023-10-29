@@ -38,8 +38,9 @@ class FieldTest {
 
         CropRow row1 = new CropRow();
         fields.add(row1);
+        field.addCropRow(row1);
 
-        assertEquals(fields.size(), field.getCropRows().size());
+        assertEquals(field.getCropRows(), field.getCropRows().size());
         assertEquals(row1, field.getCropRows().get(0));
     }
 }
