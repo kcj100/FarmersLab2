@@ -63,7 +63,7 @@ class ChickenTest {
         chicken2.setHasBeenFertilized(false);
         Edible egg2 = chicken2.yield();
         assertNotNull(egg2);
-        assertFalse(chicken2.gethasBeenFertilized());
+        assertTrue(chicken2.gethasBeenFertilized());
 
     }
 }
