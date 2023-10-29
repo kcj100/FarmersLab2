@@ -30,7 +30,9 @@ class CornStalkTest {
 
 
             // assertNotNull();
-            assert cornStalk != null;
+          //  assert cornStalk != null;
+            String text = "CornStalk plant has been harvested";
+            assertNotNull(cornStalk.yield());
 
             System.out.println("CornStalk plant has been harvested");
         } else {

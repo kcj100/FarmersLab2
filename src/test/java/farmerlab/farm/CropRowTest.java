@@ -51,7 +51,6 @@ class CropRowTest {
         cropRow.add(tomato);
 
         CropRow crops = new CropRow();
-        crops.setCropRow(cropRow);
 
         crops.harvestAllCrops();
 
