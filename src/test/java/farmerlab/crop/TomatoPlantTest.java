@@ -7,17 +7,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class TomatoPlantTest {
 
     @Test
-    void testYield(){
-        Corn corn = TomatoPlant.yield();
+    void testYield() {
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        if (tomatoPlant.isHasBeenFertilized() && !tomatoPlant.isHasBeenHarvested()) {
 
-        // Asserting that Corn is harvested if it has been fertilized and not harvested
-        if (TomatoPlant.isHasBeenFertilized() && !TomatoPlant.isHasBeenHarvested()) {
-            assert corn != null;
+            String text = "CornStalk plant has been harvested";
+            Tomato yieldResult = tomatoPlant.yield();
+            assertNotNull(yieldResult);
+
             System.out.println("CornStalk plant has been harvested");
         } else {
-            assert corn == null;
+            Tomato yieldResult = tomatoPlant.yield();
+            assertNull(yieldResult);
             System.out.println("CornStalk plant has not been harvested");
         }
-    }
 
+
+    }
 }

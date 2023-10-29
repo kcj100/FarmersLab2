@@ -28,15 +28,14 @@ class CornStalkTest {
 
         if (cornStalk.isHasBeenFertilized() && !cornStalk.isHasBeenHarvested()) {
 
-
-            // assertNotNull();
-          //  assert cornStalk != null;
             String text = "CornStalk plant has been harvested";
-            assertNotNull(cornStalk.yield());
+            Corn yieldResult = cornStalk.yield();
+            assertNotNull(yieldResult);
 
             System.out.println("CornStalk plant has been harvested");
         } else {
-            assert cornStalk == null;
+            Corn yieldResult = cornStalk.yield();
+            assertNull(yieldResult);
             System.out.println("CornStalk plant has not been harvested");
         }
     }
