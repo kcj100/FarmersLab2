@@ -11,7 +11,7 @@ Egg egg1;
 
     @BeforeEach
     public void setUp(){
-        Egg egg1 = new Egg();
+        egg1 = new Egg();
 
     }
     @Test

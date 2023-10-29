@@ -12,8 +12,8 @@ Animal animal1;
 Animal animal2;
    @BeforeEach
    public void setUp(){
-       Animal animal1 = new Chicken("Chicken");
-       Animal animal2 = new Horse("Horse");
+       animal1 = new Chicken("Chicken");
+       animal2 = new Horse("Horse");
    }
     @Test
     void getAnimalName() {

@@ -10,8 +10,8 @@ Horse horse1;
 Horse horse2;
    @BeforeEach
    public void setUp(){
-       Horse horse1 = new Horse("Horse1");
-       Horse horse2 = new Horse("Horse2");
+       horse1 = new Horse("Horse1");
+       horse2 = new Horse("Horse2");
    }
   @Test
   void testConstructor(){
