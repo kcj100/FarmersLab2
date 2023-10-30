@@ -36,7 +36,6 @@ public abstract class Animal implements NoiseMaker, Eater, Stomach {
 
     @Override
     public void eat(Edible food){
-<<<<<<< Updated upstream
         System.out.println(animalName + " is eating " + food.getClass().getSimpleName().toLowerCase());
         stomach.add(food);
     }
@@ -44,10 +43,3 @@ public abstract class Animal implements NoiseMaker, Eater, Stomach {
 
 
 }
-=======
-        System.out.println(animalName + "is eating " + food.getClass().getSimpleName().toLowerCase());
-    }
-
-
-}
->>>>>>> Stashed changes
