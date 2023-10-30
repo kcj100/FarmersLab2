@@ -67,11 +67,14 @@ Plot plot = new Plot();
     @Test
     void tuesday() {
 
+        plot.cropRow.addCrop(plot.tomatoPlant1);
+        plot.field.addCropRow(plot.cropRow);
      plot.farmer.mount(plot.tractor);
 
      plot.tractor.harvest(plot.field);
 
      plot.farmer.dismount(plot.tractor);
+
 
      assertTrue(plot.field.getCropRows().get(0).getCropRow().get(0).isHasBeenHarvested());
     }
