@@ -1,4 +1,6 @@
 package farmerlab.vehicle;
+import farmerlab.crop.CornStalk;
+import farmerlab.crop.TomatoPlant;
 import farmerlab.farm.CropRow;
 import farmerlab.farm.Field;
 import org.junit.jupiter.api.Test;
@@ -18,42 +20,29 @@ public class CropDusterTest {
         assertEquals(id, cropDuster.getId());
         assertEquals(sound, cropDuster.getSound());
     }
-    @Test
-    public void testWhenCropDusterIsInUseItShouldFertilizeAllCropRows() {
+
         // Given
-        CropDuster cropDuster = new CropDuster(1, "Sound");
-        Field field = new Field();
-        CropRow cropRow1 = new CropRow();
-        CropRow cropRow2 = new CropRow();
-        field.addCropRow(cropRow1);
-        field.addCropRow(cropRow2);
+        @Test
+        public void testWhenCropDusterIsInUseItShouldFertilizeAllCropRows() {
+            // Arrange
+            CropDuster cropDuster = new CropDuster(1, "Sound");
+            Field field = new Field();
+            CropRow cropRow1 = new CropRow();
+            CropRow cropRow2 = new CropRow();
+            field.addCropRow(cropRow1);
+            CornStalk cornStalk = new CornStalk();
+            TomatoPlant tomatoPlant = new TomatoPlant();
+            cropRow1.addCrop(cornStalk);
 
-        // When
-        cropDuster.setInUse(true);
-        cropDuster.fly(field);
 
+            // Act
+            cropDuster.setInUse(true);
+            cropDuster.fly(field);
         // Then
-        assertTrue(cropRow1.haFertilized());
-        assertTrue(cropRow2.isFertilized());
+        assertTrue(cornStalk.isHasBeenFertilized());
+        assertFalse(tomatoPlant.isHasBeenFertilized());
     }
 
-    @Test
-    public void FertilizeTest(){
-        /*
-          private void fertilize(Field field) {
-        ArrayList<CropRow> cropRows = field.getCropRows();
-        for (CropRow cropRow : cropRows) {
-            cropRow.fertilizeAllCrops();
-        }
-    }
-         */
-        CropDuster cropDuster = new CropDuster(1, "Sound");
-        Field field = new Field();
-        CropRow cropRow1 = new CropRow();
-        CropRow cropRow2 = new CropRow();
-        field.addCropRow(cropRow1);
-        field.addCropRow(cropRow2);
-        cropDuster.(field);
 
-    }
+
 }
