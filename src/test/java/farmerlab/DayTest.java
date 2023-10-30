@@ -1,12 +1,17 @@
 package farmerlab;
 
 import farmerlab.animal.Horse;
+import farmerlab.crop.Corn;
+import farmerlab.crop.Crop;
+import farmerlab.crop.TomatoPlant;
 import farmerlab.farm.CropRow;
 import farmerlab.farm.Farm;
 import farmerlab.farm.Plot;
 import farmerlab.farm.Stable;
 import farmerlab.interfaces.Rideable;
 import farmerlab.person.Farmer;
+import farmerlab.person.Pilot;
+import farmerlab.vehicle.CropDuster;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -78,7 +83,7 @@ Plot plot = new Plot();
         stable1.addHorse(horse2);
         CropRow cropRow1 = new CropRow();
         CropRow cropRow2 = new CropRow();
-        farm.getFarmHouse()
+        farm.getFarmHouse();
     }
 
     @Test
@@ -103,15 +108,20 @@ Plot plot = new Plot();
 
 
     }
-//    @Test
-//    void morningHorseFeeding(){
-//    //check if horses have been fed the right amount of EarCorn by both farmers
-//        for (Stable stable : plot.farm.getStables()){
-//        for (Horse horse : stable.getHorses()){
-//            assertEquals(3, horse.);
-//            assertEquals(3, horse.getCornEatenBy(frolianda));
-//        }
-//    }
+    @Test
+    void morningHorseFeedingTest(){
+    //check if horses have been fed the right amount of EarCorn by both farmers
+        for (Stable stable : plot.farm.getStables()){
+
+         for (Horse horse : stable.getHorses()) {
+            horse.eat(new Corn());
+            horse.eat(new Corn());
+            horse.eat(new Corn());
+            }
+         assertEquals(3,stable.getHorses().get(0).getStomach());
+
+        }
+    }
 
     @Test
     void morningBreakfastTest() {
