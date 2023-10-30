@@ -1,19 +1,17 @@
 package farmerlab;
 
 import farmerlab.animal.Horse;
-<<<<<<< HEAD
-import farmerlab.farm.*;
-import farmerlab.interfaces.Rideable;
-import farmerlab.person.Farmer;
-import farmerlab.vehicle.Tractor;
-=======
+import farmerlab.crop.Corn;
+import farmerlab.crop.Crop;
+import farmerlab.crop.TomatoPlant;
 import farmerlab.farm.CropRow;
 import farmerlab.farm.Farm;
 import farmerlab.farm.Plot;
 import farmerlab.farm.Stable;
 import farmerlab.interfaces.Rideable;
 import farmerlab.person.Farmer;
->>>>>>> TestBranch
+import farmerlab.person.Pilot;
+import farmerlab.vehicle.CropDuster;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -41,32 +39,24 @@ Plot plot = new Plot();
     @Test
     void monday() {
 
-        CropRow cropRow = new CropRow();
-        CropRow cropRow1 = new CropRow();
-        Crop Tomatoplant = new TomatoPlant();
-        Crop CornStalk = new CornStalk();
-        CropDuster cropDuster = new CropDuster(1, "wiiiinngg");
-        Field field = new Field();
-        Pilot froilanda = new Pilot("Dawn", "geronimo", 123);
+        plot.cropRow.addCrop(plot.tomatoPlant1); //Added a cropRow to CropRows
+        plot.field.addCropRow(plot.cropRow); //then proceeded to add the cropRow into field
 
-        cropRow.addCrop(Tomatoplant); //Added a cropRow to CropRows
-        field.addCropRow(cropRow); //then proceeded to add the cropRow into field
+        plot.cropRow2.addCrop((plot.cornStalk1));
+        plot.field.addCropRow(plot.cropRow2);
 
-        cropRow1.addCrop((CornStalk));
-        field.addCropRow(cropRow);
-
-        froilanda.mount(cropDuster); //had the pilot mount the cropDuster
-        cropDuster.setInUse(true); //It should be assumed that it is in use when cropDuster is mounted.
-        cropDuster.fly(field); // Pilot flew cropDuster over field
+        plot.pilot.mount(plot.cropDuster); //had the pilot mount the cropDuster
+        plot.cropDuster.setInUse(true); //It should be assumed that it is in use when cropDuster is mounted.
+        plot.cropDuster.fly(plot.field); // Pilot flew cropDuster over field
 
 
-        assertTrue(field.getCropRows().get(0).getCropRow().get(0).isHasBeenFertilized());
+        assertTrue(plot.field.getCropRows().get(0).getCropRow().get(0).isHasBeenFertilized());
         /*
         We had entry to the field to gain access to cropRows
          accessed the cropRow with the get() method
          accessed a plant within that cropRow and ensured it was fertilized
         */
-        assertTrue(field.getCropRows().get(1).getCropRow().get(0).isHasBeenFertilized());
+        assertTrue(plot.field.getCropRows().get(1).getCropRow().get(0).isHasBeenFertilized());
 
 
 
@@ -76,14 +66,6 @@ Plot plot = new Plot();
 
     @Test
     void tuesday() {
-<<<<<<< HEAD
-
-        plot.farmer.mount(plot.tractor);
-        plot.tractor.harvest(plot.field);
-
-        assertEquals(true, plot.farmer.equals(true));
-
-=======
         Farm farm = new Farm();
         Stable stable1 = new Stable();
         farm.addStable(stable1);
@@ -93,8 +75,7 @@ Plot plot = new Plot();
         stable1.addHorse(horse2);
         CropRow cropRow1 = new CropRow();
         CropRow cropRow2 = new CropRow();
-        farm.getFarmHouse()
->>>>>>> TestBranch
+        farm.getFarmHouse();
     }
 
     @Test
@@ -119,15 +100,20 @@ Plot plot = new Plot();
 
 
     }
-//    @Test
-//    void morningHorseFeeding(){
-//    //check if horses have been fed the right amount of EarCorn by both farmers
-//        for (Stable stable : plot.farm.getStables()){
-//        for (Horse horse : stable.getHorses()){
-//            assertEquals(3, horse.);
-//            assertEquals(3, horse.getCornEatenBy(frolianda));
-//        }
-//    }
+    @Test
+    void morningHorseFeedingTest(){
+    //check if horses have been fed the right amount of EarCorn by both farmers
+        for (Stable stable : plot.farm.getStables()){
+
+         for (Horse horse : stable.getHorses()) {
+            horse.eat(new Corn());
+            horse.eat(new Corn());
+            horse.eat(new Corn());
+            }
+         assertEquals(3,stable.getHorses().get(0).getStomach());
+
+        }
+    }
 
     @Test
     void morningBreakfastTest() {
