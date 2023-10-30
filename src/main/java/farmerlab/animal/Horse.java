@@ -3,7 +3,7 @@ package farmerlab.animal;
 import farmerlab.interfaces.Rideable;
 
 public class Horse extends Animal implements Rideable {
-    private boolean inUse;
+    private boolean inUse = false;
     public Horse(String animalName){
         super(animalName);
     }
