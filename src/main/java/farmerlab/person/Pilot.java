@@ -38,12 +38,7 @@ private boolean isRiding;
     public void fly(CropDuster cropDuster, Field field) {
 
     }
-    @Override
-    public void eat(Edible food) {
 
-        food.getIfEdible();
-
-    }
 
     @Override
     public void makeNoise() {
@@ -106,4 +101,6 @@ private boolean isRiding;
 
         }
     }
+
+
 }
