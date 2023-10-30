@@ -1,5 +1,6 @@
 package farmerlab.person;
 
+import farmerlab.crop.Tomato;
 import farmerlab.interfaces.Edible;
 import org.junit.jupiter.api.Test;
 
@@ -12,13 +13,8 @@ class PilotTest {
    @Test
    void eat(){
        Pilot pilot = new Pilot("James", "Get ready for flight", 225565);
-       Edible food = new Edible() {
-           @Override
-           public boolean getIfEdible() {
-               return false;
-           }
-       };
 
+       Tomato food = new Tomato();
 
        pilot.eat(food);
 

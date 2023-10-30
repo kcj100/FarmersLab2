@@ -8,13 +8,12 @@ class CornStalkTest {
 
     @Test
     void testYield(){
-        // Corn corn = CornStalk.yield - Original problem  calling it from the class, rather than making an instance
 
         CornStalk cornStalk = new CornStalk();
 
         // Here you're testing yield
 
-        // Right now you only have created a new cornstack
+        // Right now you only have created a new cornstalk
 
         // You have to execute yield and test the result
 

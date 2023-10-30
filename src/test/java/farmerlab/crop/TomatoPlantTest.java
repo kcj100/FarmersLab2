@@ -9,6 +9,7 @@ class TomatoPlantTest {
     @Test
     void testYield() {
         TomatoPlant tomatoPlant = new TomatoPlant();
+        //if the tomato plant has been fertilized and harvested the yield method should produce tomatoes
         if (tomatoPlant.isHasBeenFertilized() && !tomatoPlant.isHasBeenHarvested()) {
 
             String text = "CornStalk plant has been harvested";

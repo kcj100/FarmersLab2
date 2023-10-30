@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class CropDuster extends Aircraft {
 
     public CropDuster( int id, String sound) {
+
         super( id, sound);
     }
 
