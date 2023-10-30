@@ -1,10 +1,10 @@
 package farmerlab;
 
 import farmerlab.animal.Horse;
-import farmerlab.farm.CropRow;
-import farmerlab.farm.Farm;
-import farmerlab.farm.Plot;
-import farmerlab.farm.Stable;
+import farmerlab.farm.*;
+import farmerlab.interfaces.Rideable;
+import farmerlab.person.Farmer;
+import farmerlab.vehicle.Tractor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,19 +31,15 @@ Plot plot = new Plot();
 
     }
 
-//    @Test
-//    void tuesday() {
-//        Farm farm = new Farm();
-//        Stable stable1 = new Stable();
-//        farm.addStable(stable1);
-//        Horse horse1 = new Horse("Speed");
-//        Horse horse2 = new Horse("Shadow");
-//        stable1.addHorse(horse1);
-//        stable1.addHorse(horse2);
-//        CropRow cropRow1 = new CropRow();
-//        CropRow cropRow2 = new CropRow();
-//        farm.getFarmHouse()
-//    }
+    @Test
+    void tuesday() {
+
+        plot.farmer.mount(plot.tractor);
+        plot.tractor.harvest(plot.field);
+
+        assertEquals(true, plot.farmer.equals(true));
+
+    }
 
     @Test
     void morningRideTest() {
