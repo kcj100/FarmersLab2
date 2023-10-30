@@ -2,6 +2,7 @@ package farmerlab.animal;
 
 import farmerlab.interfaces.Eater;
 import farmerlab.interfaces.NoiseMaker;
+import farmerlab.interfaces.Stomach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -36,9 +37,11 @@ Animal animal2;
     void testImplementation() {
        assertTrue(animal1 instanceof Eater);
        assertTrue(animal1 instanceof NoiseMaker);
+       assertTrue(animal1 instanceof Stomach);
 
         assertTrue(animal2 instanceof Eater);
         assertTrue(animal2 instanceof NoiseMaker);
+        assertTrue(animal2 instanceof Stomach);
 
     }
 }
