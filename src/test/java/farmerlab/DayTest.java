@@ -1,10 +1,13 @@
 package farmerlab;
 
 import farmerlab.animal.Horse;
-import farmerlab.crop.CornStalk;
+import farmerlab.crop.Corn;
 import farmerlab.crop.Crop;
 import farmerlab.crop.TomatoPlant;
-import farmerlab.farm.*;
+import farmerlab.farm.CropRow;
+import farmerlab.farm.Farm;
+import farmerlab.farm.Plot;
+import farmerlab.farm.Stable;
 import farmerlab.interfaces.Rideable;
 import farmerlab.person.Farmer;
 import farmerlab.person.Pilot;
@@ -12,8 +15,10 @@ import farmerlab.vehicle.CropDuster;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DayTest {
 Plot plot = new Plot();
@@ -59,22 +64,55 @@ Plot plot = new Plot();
 
     }
 
-//    @Test
-//    void tuesday() {
-//        Farm farm = new Farm();
-//        Stable stable1 = new Stable();
-//        farm.addStable(stable1);
-//        Horse horse1 = new Horse("Speed");
-//        Horse horse2 = new Horse("Shadow");
-//        stable1.addHorse(horse1);
-//        stable1.addHorse(horse2);
-//        CropRow cropRow1 = new CropRow();
-//        CropRow cropRow2 = new CropRow();
-//        farm.getFarmHouse()
-//    }
+    @Test
+    void tuesday() {
+        Farm farm = new Farm();
+        Stable stable1 = new Stable();
+        farm.addStable(stable1);
+        Horse horse1 = new Horse("Speed");
+        Horse horse2 = new Horse("Shadow");
+        stable1.addHorse(horse1);
+        stable1.addHorse(horse2);
+        CropRow cropRow1 = new CropRow();
+        CropRow cropRow2 = new CropRow();
+        farm.getFarmHouse();
+    }
 
     @Test
     void morningRideTest() {
+        Farmer frolian = new Farmer("frolian", "Yee-haw");
+        Farmer frolianda =  new Farmer("frolianda","yuh");
+        Plot plot = new Plot();
+
+        int counter = 0;
+
+        for (Stable stable : plot.farm.getStables()) {
+            for (Horse horse : stable.getHorses()) {
+                if (counter % 2 == 0) { // If the counter is even, Farmer mounts the horse
+                    frolian.mount(horse); // Farmer rides the horse
+                } else {
+                    // If the counter is odd, Pilot mounts the horse
+                    frolianda.mount(horse); // Pilot rides the horse
+                }
+                counter++; // Increment the counter for the next iteration
+            }
+        }
+
+
+    }
+    @Test
+    void morningHorseFeedingTest(){
+    //check if horses have been fed the right amount of EarCorn by both farmers
+        for (Stable stable : plot.farm.getStables()){
+
+         for (Horse horse : stable.getHorses()) {
+            horse.eat(new Corn());
+            horse.eat(new Corn());
+            horse.eat(new Corn());
+            }
+         assertEquals(3,stable.getHorses().get(0).getStomach());
+
+        }
     }
 
     @Test

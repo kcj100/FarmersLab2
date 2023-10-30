@@ -35,7 +35,7 @@ public class Farmer extends  Person implements Botanist, Rider {
         if (ride instanceof FarmVehicle) {
 
             if (ride instanceof Tractor) {
-                if (!ride.isInUse()) {
+                if (ride.isInUse()!=true) {
                     ride.setInUse(true);
                     System.out.println("The ride is mounted");
 
@@ -46,7 +46,7 @@ public class Farmer extends  Person implements Botanist, Rider {
                 }
 
             } else if (ride instanceof Horse) {
-                if (!ride.isInUse()) {
+                if (ride.isInUse()!=true) {
                     ride.setInUse(true);
                     System.out.println("The horse is mounted");
                 } else {
@@ -62,7 +62,7 @@ public class Farmer extends  Person implements Botanist, Rider {
         if (ride instanceof FarmVehicle) {
 
             if (ride instanceof Tractor) {
-                if (ride.isInUse()) {
+                if (ride.isInUse()!=false) {
                     ride.setInUse(false);
                     System.out.println("The ride is dismounted");
 
@@ -73,7 +73,7 @@ public class Farmer extends  Person implements Botanist, Rider {
                 }
 
             } else if (ride instanceof Horse) {
-                if (ride.isInUse()) {
+                if (ride.isInUse()!=false) {
                     ride.setInUse(false);
                     System.out.println("The horse is dismounted");
                 } else {

@@ -56,11 +56,11 @@ private boolean isRiding;
         if (ride instanceof FarmVehicle) {
 
             if (ride instanceof CropDuster) {
-                if (!ride.isInUse()) {
+                if (ride.isInUse()!=true) {
                     ride.setInUse(true);
                     System.out.println("The ride is mounted");
 
-                    ((CropDuster) ride).isInUse();
+
                     System.out.println("CropDuster is mounted");
                 } else {
                     System.out.println("The CropDuster is in use and can not be mounted");
@@ -83,11 +83,13 @@ private boolean isRiding;
         if (ride instanceof FarmVehicle) {
 
             if (ride instanceof CropDuster) {
-                if (ride.isInUse()) {
+                if (ride.isInUse()!=false
+
+                ) {
                     ride.setInUse(false);
                     System.out.println("The ride is dismounted");
 
-                    ((CropDuster) ride).isInUse();
+
                     System.out.println("The CropDuster is dismounted");
                 } else {
                     System.out.println("The CropDuster is not in use and can be mounted");

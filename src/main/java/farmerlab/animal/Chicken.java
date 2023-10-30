@@ -2,6 +2,7 @@ package farmerlab.animal;
 
 import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.Produce;
+import farmerlab.interfaces.Stomach;
 
 public class Chicken extends Animal implements Produce {
     private boolean hasBeenFertilized = false;
