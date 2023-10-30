@@ -1,11 +1,18 @@
 package farmerlab.person;
 
 import farmerlab.interfaces.Eater;
+import farmerlab.interfaces.Edible;
 import farmerlab.interfaces.NoiseMaker;
+import farmerlab.interfaces.Stomach;
 
-public abstract class Person implements NoiseMaker, Eater {
+import java.util.ArrayList;
+
+public abstract class Person implements NoiseMaker, Eater, Stomach {
     private String name;
     private String favPhrase;
+
+   protected ArrayList<Edible> stomach = new ArrayList<>();
+
 
     public Person(String name, String favPhrase) {
         this.name = name;
@@ -27,5 +34,18 @@ public abstract class Person implements NoiseMaker, Eater {
     public void setFavPhrase(String favPhrase) {
         this.favPhrase = favPhrase;
     }
+
+    @Override
+    public int getStomach() {
+        return stomach.size();
+    }
+
+    @Override
+    public void eat(Edible food) {
+        System.out.println(name + " is eating " + food.getClass().getSimpleName().toLowerCase());
+
+        stomach.add(food);
+    }
 }
+
 
