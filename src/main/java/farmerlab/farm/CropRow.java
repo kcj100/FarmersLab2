@@ -14,7 +14,7 @@ public class CropRow {
 
 
             for(Crop i : crops){
-               // i.setHasBeenHarvested(false);
+                i.setHasBeenHarvested(false);
                 i.setHasBeenFertilized(true);
             }
         System.out.println("All crops have been fertilized");
@@ -22,7 +22,7 @@ public class CropRow {
 
     public void harvestAllCrops(){
         for (Crop crop : crops){
-           // crop.setHasBeenFertilized(true);
+           crop.setHasBeenFertilized(false);
             crop.setHasBeenHarvested(true);
         }
         System.out.println("All crops have been harvested");
