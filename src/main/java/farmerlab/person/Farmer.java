@@ -2,6 +2,7 @@ package farmerlab.person;
 
 import farmerlab.animal.Horse;
 import farmerlab.crop.Crop;
+import farmerlab.farm.CropRow;
 import farmerlab.interfaces.*;
 import farmerlab.vehicle.Tractor;
 
@@ -21,8 +22,8 @@ public class Farmer extends  Person implements Botanist, Rider {
     }
 
     @Override
-    public Crop plant(Crop crop) {
-        return null;
+    public void  plant(Crop crop, CropRow cropRow) {
+        cropRow.addCrop(crop);
     }
 
     @Override

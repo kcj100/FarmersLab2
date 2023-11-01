@@ -37,6 +37,7 @@ private boolean isRiding;
 
     public void fly(CropDuster cropDuster, Field field) {
 
+        cropDuster.fly(field);
     }
 
 
