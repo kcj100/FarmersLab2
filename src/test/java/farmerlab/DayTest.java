@@ -119,6 +119,8 @@ class DayTest {
 
     @Test
     void morningBreakfastTest() {
+        //check if farmers ate their breakfast
+
         plot.farmer.eat(new Corn());
         plot.farmer.eat(new Tomato());
         plot.farmer.eat(new Tomato());

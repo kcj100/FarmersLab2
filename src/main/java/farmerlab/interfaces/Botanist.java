@@ -1,8 +1,9 @@
 package farmerlab.interfaces;
 
 import farmerlab.crop.Crop;
+import farmerlab.farm.CropRow;
 
 public interface Botanist {
 
-     Crop plant(Crop crop);
+     void  plant(Crop crop, CropRow cropRow);
 }
