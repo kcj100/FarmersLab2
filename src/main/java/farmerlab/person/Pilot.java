@@ -16,6 +16,7 @@ private boolean isRiding;
 
     public Pilot(String name, String favPhrase, long licenseID) {
         super(name, favPhrase);
+        this.licenseID = licenseID;
     }
 
 
