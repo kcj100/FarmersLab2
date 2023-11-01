@@ -37,13 +37,9 @@ private boolean isRiding;
 
     public void fly(CropDuster cropDuster, Field field) {
 
+        cropDuster.fly(field);
     }
-    @Override
-    public void eat(Edible food) {
 
-        food.getIfEdible();
-
-    }
 
     @Override
     public void makeNoise() {
@@ -53,13 +49,11 @@ private boolean isRiding;
 
     @Override
     public void mount(Rideable ride) {
-        if (ride instanceof FarmVehicle) {
+        if (ride instanceof FarmVehicle) {//checks to see if the ride is an instance of farmvehicle
 
-            if (ride instanceof CropDuster) {
-                if (ride.isInUse()!=true) {
-                    ride.setInUse(true);
-                    System.out.println("The ride is mounted");
-
+            if (ride instanceof CropDuster) { //checks if ride is an instance of cropduster as well.
+                if (ride.isInUse()!=true) {//checks to see if cropduster is in use
+                    ride.setInUse(true);//sets the inuse method to true
 
                     System.out.println("CropDuster is mounted");
                 } else {
@@ -80,15 +74,13 @@ private boolean isRiding;
 
     @Override
     public void dismount(Rideable ride) {
-        if (ride instanceof FarmVehicle) {
+        if (ride instanceof FarmVehicle) {//checks if the ride is an instance of farmvehicle
 
-            if (ride instanceof CropDuster) {
-                if (ride.isInUse()!=false
+            if (ride instanceof CropDuster) {//checks if ride is instance of cropduster
+                if (ride.isInUse()!=false//checks to see if the cropduster is in use
 
                 ) {
-                    ride.setInUse(false);
-                    System.out.println("The ride is dismounted");
-
+                    ride.setInUse(false);//sets the in use to false
 
                     System.out.println("The CropDuster is dismounted");
                 } else {
@@ -106,4 +98,6 @@ private boolean isRiding;
 
         }
     }
+
+
 }

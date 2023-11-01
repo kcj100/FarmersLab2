@@ -1,8 +1,10 @@
 package farmerlab;
 
+import farmerlab.animal.Egg;
 import farmerlab.animal.Horse;
 import farmerlab.crop.Corn;
 import farmerlab.crop.Crop;
+import farmerlab.crop.Tomato;
 import farmerlab.crop.TomatoPlant;
 import farmerlab.farm.CropRow;
 import farmerlab.farm.Farm;
@@ -21,7 +23,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DayTest {
-Plot plot = new Plot();
+    Plot plot = new Plot();
+
     @Test
     void sunday() {
         plot.cropRow.addCrop(plot.cornStalk1); // Plant  in the first CropRow
@@ -59,29 +62,27 @@ Plot plot = new Plot();
         assertTrue(plot.field.getCropRows().get(1).getCropRow().get(0).isHasBeenFertilized());
 
 
-
-
-
     }
 
     @Test
     void tuesday() {
-        Farm farm = new Farm();
-        Stable stable1 = new Stable();
-        farm.addStable(stable1);
-        Horse horse1 = new Horse("Speed");
-        Horse horse2 = new Horse("Shadow");
-        stable1.addHorse(horse1);
-        stable1.addHorse(horse2);
-        CropRow cropRow1 = new CropRow();
-        CropRow cropRow2 = new CropRow();
-        farm.getFarmHouse();
+
+        plot.cropRow.addCrop(plot.tomatoPlant1);
+        plot.field.addCropRow(plot.cropRow);
+     plot.farmer.mount(plot.tractor);
+
+     plot.tractor.harvest(plot.field);
+
+     plot.farmer.dismount(plot.tractor);
+
+
+     assertTrue(plot.field.getCropRows().get(0).getCropRow().get(0).isHasBeenHarvested());
     }
 
     @Test
     void morningRideTest() {
         Farmer frolian = new Farmer("frolian", "Yee-haw");
-        Farmer frolianda =  new Farmer("frolianda","yuh");
+        Farmer frolianda = new Farmer("frolianda", "yuh");
         Plot plot = new Plot();
 
         int counter = 0;
@@ -100,22 +101,44 @@ Plot plot = new Plot();
 
 
     }
-    @Test
-    void morningHorseFeedingTest(){
-    //check if horses have been fed the right amount of EarCorn by both farmers
-        for (Stable stable : plot.farm.getStables()){
 
-         for (Horse horse : stable.getHorses()) {
-            horse.eat(new Corn());
-            horse.eat(new Corn());
-            horse.eat(new Corn());
+    @Test
+    void morningHorseFeedingTest() {
+        //check if horses have been fed the right amount of EarCorn by both farmers
+        for (Stable stable : plot.farm.getStables()) {
+
+            for (Horse horse : stable.getHorses()) {
+                horse.eat(new Corn());
+                horse.eat(new Corn());
+                horse.eat(new Corn());
             }
-         assertEquals(3,stable.getHorses().get(0).getStomach());
+            assertEquals(3, stable.getHorses().get(0).getStomach());
 
         }
     }
 
     @Test
     void morningBreakfastTest() {
+        //check if farmers ate their breakfast
+
+        plot.farmer.eat(new Corn());
+        plot.farmer.eat(new Tomato());
+        plot.farmer.eat(new Tomato());
+        for (int i = 0; i < 5; i++) {
+            plot.farmer.eat(new Egg());
+        }
+        plot.pilot.eat(new Corn());
+        plot.pilot.eat(new Corn());
+        plot.pilot.eat(new Tomato());
+        plot.pilot.eat(new Egg());
+        plot.pilot.eat(new Egg());
+
+        int farmerActual = plot.farmer.getStomach();
+        int pilotActual = plot.pilot.getStomach();
+        int farmerExpected = 8;
+        int pilotExpected = 5;
+
+assertEquals(farmerExpected, farmerActual);
+assertEquals(pilotExpected, pilotActual);
     }
 }

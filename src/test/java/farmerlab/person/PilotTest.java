@@ -12,6 +12,8 @@ class PilotTest {
 
    @Test
    void eat(){
+       //check to see if the eat method works
+
        Pilot pilot = new Pilot("James", "Get ready for flight", 225565);
 
        Tomato food = new Tomato();
@@ -27,7 +29,7 @@ class PilotTest {
 
 @Test
     void testGetLicenseID(){
-
+//checks to see if the get license ID method works
     long expectedLicenseID = 5554210;
     Pilot license = new Pilot("Dante", "Ready for takeoff", expectedLicenseID);
 
@@ -38,6 +40,7 @@ class PilotTest {
 
 @Test
     void setLicenseID(){
+//checks to see if set license ID method works
 
     long expectedLicenseID = 254878;
        Pilot license = new Pilot("Jack", "Blastoff!!", expectedLicenseID);
@@ -51,7 +54,8 @@ class PilotTest {
 @Test
 void    isRiding(){
 
-    Pilot  pilot = new Pilot("Tyrone", "Lets ride", 182571);
+    //checks to see if is riding method works
+       Pilot  pilot = new Pilot("Tyrone", "Lets ride", 182571);
 
     pilot.setRiding(true);
     assertTrue(pilot.isRiding());

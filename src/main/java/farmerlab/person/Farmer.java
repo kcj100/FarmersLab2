@@ -2,6 +2,7 @@ package farmerlab.person;
 
 import farmerlab.animal.Horse;
 import farmerlab.crop.Crop;
+import farmerlab.farm.CropRow;
 import farmerlab.interfaces.*;
 import farmerlab.vehicle.Tractor;
 
@@ -12,11 +13,7 @@ public class Farmer extends  Person implements Botanist, Rider {
         super(name, favPhrase);
     }
 
-    @Override
-    public void eat(Edible food) {
-        food.getIfEdible();
 
-    }
 
     @Override
     public void makeNoise() {
@@ -25,8 +22,8 @@ public class Farmer extends  Person implements Botanist, Rider {
     }
 
     @Override
-    public Crop plant(Crop crop) {
-        return null;
+    public void  plant(Crop crop, CropRow cropRow) {
+        cropRow.addCrop(crop);
     }
 
     @Override
@@ -35,7 +32,7 @@ public class Farmer extends  Person implements Botanist, Rider {
         if (ride instanceof FarmVehicle) {
 
             if (ride instanceof Tractor) {
-                if (ride.isInUse()!=true) {
+                if (ride.isInUse() != true) {
                     ride.setInUse(true);
                     System.out.println("The ride is mounted");
 
@@ -46,7 +43,7 @@ public class Farmer extends  Person implements Botanist, Rider {
                 }
 
             } else if (ride instanceof Horse) {
-                if (ride.isInUse()!=true) {
+                if (ride.isInUse() != true) {
                     ride.setInUse(true);
                     System.out.println("The horse is mounted");
                 } else {
@@ -62,7 +59,7 @@ public class Farmer extends  Person implements Botanist, Rider {
         if (ride instanceof FarmVehicle) {
 
             if (ride instanceof Tractor) {
-                if (ride.isInUse()!=false) {
+                if (ride.isInUse() != false) {
                     ride.setInUse(false);
                     System.out.println("The ride is dismounted");
 
@@ -73,7 +70,7 @@ public class Farmer extends  Person implements Botanist, Rider {
                 }
 
             } else if (ride instanceof Horse) {
-                if (ride.isInUse()!=false) {
+                if (ride.isInUse() != false) {
                     ride.setInUse(false);
                     System.out.println("The horse is dismounted");
                 } else {
@@ -84,3 +81,4 @@ public class Farmer extends  Person implements Botanist, Rider {
         }
     }
 }
+
