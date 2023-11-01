@@ -66,16 +66,17 @@ class DayTest {
 
     @Test
     void tuesday() {
-        Farm farm = new Farm();
-        Stable stable1 = new Stable();
-        farm.addStable(stable1);
-        Horse horse1 = new Horse("Speed");
-        Horse horse2 = new Horse("Shadow");
-        stable1.addHorse(horse1);
-        stable1.addHorse(horse2);
-        CropRow cropRow1 = new CropRow();
-        CropRow cropRow2 = new CropRow();
-        farm.getFarmHouse();
+
+        plot.cropRow.addCrop(plot.tomatoPlant1);
+        plot.field.addCropRow(plot.cropRow);
+     plot.farmer.mount(plot.tractor);
+
+     plot.tractor.harvest(plot.field);
+
+     plot.farmer.dismount(plot.tractor);
+
+
+     assertTrue(plot.field.getCropRows().get(0).getCropRow().get(0).isHasBeenHarvested());
     }
 
     @Test
