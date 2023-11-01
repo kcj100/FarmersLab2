@@ -10,6 +10,8 @@ class FarmerTest {
 
     @Test
     void farmerName() {
+        //checks to see if farmer name works
+
         String expectedName = "Dante";
         String expectedPhrase = "The roosters are singing";
         Farmer farmer = new Farmer(expectedName, expectedPhrase);
@@ -19,6 +21,7 @@ class FarmerTest {
 
     @Test
     void testEat() {
+       //checks to see if eat method works
         Farmer farmer = new Farmer("Dante", "The roosters are singing");
         Tomato food = new Tomato() {
         };

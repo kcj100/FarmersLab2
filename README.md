@@ -72,6 +72,5 @@ As a team, fork this repository to an Organization and submit the URL of your fo
 		* `Sunday`, `Froilan` plants 3 different type of `Crop` in his first, second, and third `CropRow`.
 		* On `Monday`, his sister, `Froilanda` uses the `CropDuster` to `fly` over the `Field` and `fertilize` each of the `CropRow`
 		* On `Tuesday`, `Froilan` uses his `Tractor` to `harvest` each `Crop` in each `CropRow`.
-
-# Planning & Execution of Design: 
+	# Planning & Execution of Design: 
   * ask yourselves: "How do we apply **Generics** to implement our design CLEANLY?"
