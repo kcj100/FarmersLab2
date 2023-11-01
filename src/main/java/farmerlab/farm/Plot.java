@@ -11,6 +11,22 @@ import farmerlab.vehicle.CropDuster;
 import farmerlab.vehicle.Tractor;
 
 public class Plot {
+    /*
+    Create an array of ChickenCoop objects and an array of Chicken objects.
+Initialize a counter variable to keep track of the current chicken coop.
+Iterate over the Chicken array.
+If the current index is 5 or 10, increment the counter.
+Add the current chicken to the chicken coop at the current counter index.
+Create an array of Stable objects and an array of Horse objects.
+Reset the counter variable.
+Iterate over the Horse array.
+If the current index is 3 or 6, increment the counter.
+If the current index is 9, add the last horse to the stable at the current counter index and break out of the loop.
+Add the current horse to the stable at the current counter index.
+Iterate over the Stable array and add each stable to the farm.
+Iterate over the ChickenCoop array and add each chicken coop to the farm.
+     */
+
     public Plot(){ChickenCoop[] chickenCoops = new ChickenCoop[]{chickenCoop1, chickenCoop2, chickenCoop3};
         Chicken[] chickens = new Chicken[]{chicken1, chicken2, chicken3, chicken4, chicken5, chicken6,
                 chicken7, chicken8, chicken9, chicken10, chicken11, chicken12, chicken13, chicken14, chicken15};

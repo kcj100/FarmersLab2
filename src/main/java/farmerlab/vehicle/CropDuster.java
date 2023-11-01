@@ -2,10 +2,11 @@ package farmerlab.vehicle;
 
 import farmerlab.farm.CropRow;
 import farmerlab.farm.Field;
+import farmerlab.interfaces.FarmVehicle;
 
 import java.util.ArrayList;
 
-public class CropDuster extends Aircraft {
+public class CropDuster extends Aircraft implements FarmVehicle {
 
     public CropDuster( int id, String sound) {
 
@@ -34,7 +35,12 @@ public class CropDuster extends Aircraft {
     }
 
 
+    @Override
+    public void operate(boolean inUse) {
+            setInUse(inUse);
+        }
     }
+
 
 
 
